@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: triguard-df
+    env: docker
+    plan: free
+
+    # Build configuration
+    dockerfilePath: ./Dockerfile
+
+    # Port
+    ports:
+      - port: 5000
+        protocol: http
+
+    # Environment variables (set in Render dashboard)
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHONUNBUFFERED
+        value: "1"
+
+    # Scale settings
+    autoDeploy: true
+    maxInstances: 1
+    numInstances: 1
+
+    # Timeout for builds
+    dockerBuildTimeout: 600
+
+    # Custom domain (optional)
+    # customDomains:
+    #   - triguard-df.render.com
