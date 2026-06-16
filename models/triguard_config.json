@@ -1,0 +1,23 @@
+{
+  "hdf5_path": "/content/drive/MyDrive/data/deepfake_physio.h5",
+  "seed": 42,
+  "epochs": 50,
+  "batch_size": 16,
+  "num_workers": 2,
+  "lr_backbone": 2e-05,
+  "lr_head": 0.0002,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "warmup_epochs": 3,
+  "label_smooth": 0.05,
+  "dropout": 0.4,
+  "patience": 10,
+  "embed_dim": 256,
+  "n_heads": 8,
+  "n_fusion_layers": 4,
+  "n_faces": 5,
+  "face_sz": 224,
+  "n_rois": 6,
+  "clip_f": 150,
+  "fft_sz": 96
+}
