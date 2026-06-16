@@ -1,0 +1,43 @@
+# ── Core Deep Learning ────────────────────────────────────────
+torch==2.1.2
+torchvision==0.16.2
+torchaudio==2.1.2
+
+# ── Model Zoo (EfficientNet pretrained weights) ───────────────
+timm==0.9.12
+
+# ── Computer Vision & Face Detection ─────────────────────────
+opencv-python==4.9.0.80
+mediapipe==0.10.9
+
+# ── Signal Processing ─────────────────────────────────────────
+scipy==1.12.0
+numpy==1.26.4
+
+# ── Data Storage ──────────────────────────────────────────────
+h5py==3.10.0
+
+# ── Machine Learning Utilities ────────────────────────────────
+scikit-learn==1.4.0
+
+# ── Visualization ─────────────────────────────────────────────
+matplotlib==3.8.2
+seaborn==0.13.2
+
+# ── Progress & Utilities ──────────────────────────────────────
+tqdm==4.66.2
+pyyaml==6.0.1
+pandas==2.2.0
+
+# ── Experiment Tracking ───────────────────────────────────────
+wandb==0.16.3
+
+# ── Notebook ──────────────────────────────────────────────────
+jupyter==1.0.0
+ipykernel==6.29.2
+ipywidgets==8.1.2
+
+# ── Web Framework & Deployment ────────────────────────────────
+flask==3.0.0
+werkzeug==3.0.1
+gunicorn==21.2.0

@@ -1,0 +1,75 @@
+# ════════════════════════════════════════════════════════════════
+#  TriGuard-DF Configuration v2
+#  Updated after 00_verify_dataset.py findings
+# ════════════════════════════════════════════════════════════════
+
+data:
+  root_dir: "."
+  real_dir: "DFD_original_sequences"
+  fake_dir: "DFD_manipulated_sequences"
+  hdf5_path: "data/deepfake_physio.h5"
+  splits_path: "data/splits.json"
+  models_dir: "models"
+
+# Regex updated to strip leading/trailing underscores from scene name
+parsing:
+  real_pattern: "^(\\d{2})_+(.+?)\\.mp4$"
+  fake_pattern: "^(\\d{2})_(\\d{2})_+(.+?)_+([A-Za-z0-9]+)\\.mp4$"
+
+splits:
+  val_actors: 4
+  test_actors: 6      # Increased from 4 → gives ~80-120 fake test samples
+  seed: 42
+
+preprocessing:
+  face_size: 224          # Corrected: EfficientNet-B0 input size (not 256)
+  fft_size: 96
+  n_rois: 6
+  clip_frames: 150        # 6.25s at 24fps — sufficient for rPPG
+  clip_stride: 150        # Non-overlapping clips — halves storage vs stride=75
+  face_sample_per_clip: 5 # Reduced from 8 — still strong temporal coverage
+  min_valid_frames: 100
+  min_detection_rate: 0.85
+  target_fps: 24          # Corrected from 25 — matches actual video FPS
+
+rppg:
+  low_hz: 0.7
+  high_hz: 4.0
+  filter_order: 5
+
+model:
+  spatial_dim: 256
+  freq_dim: 128
+  physio_dim: 128
+  fusion_dim: 128
+  dropout: 0.3
+  n_rois: 6
+  signal_len: 150
+  n_temporal_frames: 5    # Matches face_sample_per_clip
+
+training:
+  branch_a_lr: 1.0e-4
+  branch_b_lr: 3.0e-4
+  branch_c_lr: 2.0e-4
+  branch_a_epochs: 15
+  branch_b_epochs: 20
+  branch_c_epochs: 12
+  fusion_lr: 5.0e-5
+  fusion_epochs: 10
+  finetune_lr: 1.0e-5
+  finetune_epochs: 5
+  batch_size: 8
+  weight_decay: 1.0e-5
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  patience: 5
+  modality_dropout_p: 0.15
+  num_workers: 0
+
+hardware:
+  num_threads: 4
+  pin_memory: false
+
+evaluation:
+  mc_dropout_passes: 25
+  compression_crf_levels: [18, 23, 28, 33, 38]

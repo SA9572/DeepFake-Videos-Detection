@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TriGuard-DF — Deepfake Detection</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- PARTICLE CANVAS -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- MODEL LOADING OVERLAY -->
+  <div id="model-loading-overlay" class="model-overlay">
+    <div class="model-overlay-content">
+      <div class="overlay-logo">
+        <img src="/static/images/hacker.png"
+             class="overlay-hacker-img" alt="TriGuard" />
+        <div class="overlay-scanline"></div>
+      </div>
+      <p class="overlay-title">TRIGUARD-DF</p>
+      <p class="overlay-sub">Initializing AI Engine...</p>
+      <div class="overlay-bar">
+        <div class="overlay-bar-fill"></div>
+      </div>
+      <p class="overlay-status" id="overlay-status-text">
+        Loading model weights...
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="app" class="app-hidden">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+
+        <div class="brand">
+          <div class="brand-logo-small">
+            <img src="/static/images/hacker.png"
+                 class="header-hacker-img" alt="TriGuard" />
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">
+              TriGuard<span class="brand-accent">-DF</span>
+            </span>
+            <span class="brand-tagline">Deepfake Detection System</span>
+          </div>
+        </div>
+
+        <div class="status-pill" id="status-pill">
+          <span class="status-dot" id="status-dot"></span>
+          <span class="status-label" id="status-label">Connecting...</span>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+      <div class="hero-logo-wrap" id="hero-logo">
+
+        <!-- Pulse rings behind image -->
+        <div class="logo-rings">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+        </div>
+
+        <!-- Hacker image with overlays -->
+        <div class="hacker-img-wrap" id="hacker-img-wrap">
+          <img src="/static/images/hacker.png"
+               class="hacker-img"
+               id="hacker-img"
+               alt="TriGuard Hacker" />
+          <!-- Scanline sweep -->
+          <div class="img-scanline"></div>
+          <!-- CRT scan lines texture -->
+          <div class="img-crt"></div>
+          <!-- Color flash on result -->
+          <div class="img-flash" id="img-flash"></div>
+          <!-- Corner brackets -->
+          <div class="corner tl"></div>
+          <div class="corner tr"></div>
+          <div class="corner bl"></div>
+          <div class="corner br"></div>
+        </div>
+
+      </div>
+
+      <!-- Hero text -->
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="glitch-text"
+                data-text="TRIGUARD-DF">TRIGUARD-DF</span>
+        </h1>
+        <p class="hero-subtitle">Advanced Deepfake Detection</p>
+        <p class="hero-desc">
+          Three-branch AI analysis using Spatial, Spectral &amp;
+          Physiological signals to detect manipulated video content
+          with military-grade precision.
+        </p>
+        <div class="analysis-tags">
+          <span class="tag tag-cyan">🧠 Spatial Analysis</span>
+          <span class="tag tag-cyan">📡 Spectral Analysis</span>
+          <span class="tag tag-cyan">💓 Physiological Analysis</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MODE SELECTOR -->
+    <section class="mode-section">
+      <div class="mode-cards">
+
+        <div class="mode-card active" id="mode-single"
+             onclick="switchMode('single')">
+          <div class="mode-icon">📄</div>
+          <div class="mode-label">Single Video</div>
+          <div class="mode-desc">Analyze one video with full detail</div>
+          <div class="mode-glow"></div>
+        </div>
+
+        <div class="mode-divider"><span>or</span></div>
+
+        <div class="mode-card" id="mode-batch"
+             onclick="switchMode('batch')">
+          <div class="mode-icon">📦</div>
+          <div class="mode-label">Batch Upload</div>
+          <div class="mode-desc">Analyze multiple videos at once</div>
+          <div class="mode-glow"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- UPLOAD SECTION -->
+    <section class="upload-section">
+
+      <!-- SINGLE MODE -->
+      <div id="single-panel" class="upload-panel active">
+
+        <div class="dropzone" id="single-dropzone"
+             ondragover="handleDragOver(event)"
+             ondragleave="handleDragLeave(event)"
+             ondrop="handleSingleDrop(event)"
+             onclick="document.getElementById('single-file-input').click()">
+          <div class="dropzone-inner">
+            <div class="drop-icon">🎬</div>
+            <p class="drop-title">Drop your video here</p>
+            <p class="drop-sub">or click to browse</p>
+            <p class="drop-formats">
+              Supports: .mp4 &nbsp;·&nbsp; .avi &nbsp;·&nbsp; .mov
+            </p>
+            <div class="drop-ripple"></div>
+          </div>
+        </div>
+
+        <input type="file" id="single-file-input"
+               accept=".mp4,.avi,.mov" hidden
+               onchange="handleSingleFileSelect(this)" />
+
+        <!-- Preview -->
+        <div class="preview-area" id="single-preview"
+             style="display:none">
+          <div class="preview-card">
+            <video id="preview-video" class="preview-video"
+                   controls muted playsinline></video>
+            <div class="preview-meta">
+              <div class="preview-info-row">
+                <span class="preview-icon">🎬</span>
+                <div>
+                  <div class="preview-filename"
+                       id="preview-filename"></div>
+                  <div class="preview-filesize"
+                       id="preview-filesize"></div>
+                </div>
+              </div>
+              <div class="preview-actions">
+                <button class="btn-analyze"
+                        id="btn-analyze-single"
+                        onclick="analyzeSingle()">
+                  <span class="btn-icon">🔍</span>
+                  <span>Analyze Video</span>
+                </button>
+                <button class="btn-clear" onclick="clearSingle()">
+                  ✕ Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BATCH MODE -->
+      <div id="batch-panel" class="upload-panel"
+           style="display:none">
+
+        <div class="dropzone dropzone-batch" id="batch-dropzone"
+             ondragover="handleDragOver(event)"
+             ondragleave="handleDragLeave(event)"
+             ondrop="handleBatchDrop(event)"
+             onclick="document.getElementById('batch-file-input').click()">
+          <div class="dropzone-inner">
+            <div class="drop-icon">📦</div>
+            <p class="drop-title">Drop multiple videos here</p>
+            <p class="drop-sub">or click to browse</p>
+            <p class="drop-formats">
+              Supports: .mp4 &nbsp;·&nbsp; .avi &nbsp;·&nbsp; .mov
+            </p>
+            <div class="drop-ripple"></div>
+          </div>
+        </div>
+
+        <input type="file" id="batch-file-input"
+               accept=".mp4,.avi,.mov" multiple hidden
+               onchange="handleBatchFileSelect(this)" />
+
+        <div class="batch-list-wrap" id="batch-list-wrap"
+             style="display:none">
+          <div class="batch-list-header">
+            <span class="batch-count" id="batch-count">
+              0 videos selected
+            </span>
+            <button class="btn-add-more"
+                    onclick="document.getElementById('batch-file-input').click()">
+              + Add More
+            </button>
+          </div>
+          <div class="batch-file-list" id="batch-file-list"></div>
+          <div class="batch-actions">
+            <button class="btn-analyze"
+                    id="btn-analyze-batch"
+                    onclick="analyzeBatch()">
+              <span class="btn-icon">🚀</span>
+              <span>Analyze All Videos</span>
+            </button>
+            <button class="btn-clear" onclick="clearBatch()">
+              ✕ Clear All
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ANALYSIS LOADING OVERLAY -->
+    <div class="analysis-overlay" id="analysis-overlay"
+         style="display:none">
+      <div class="analysis-content">
+
+        <!-- Animated hacker image -->
+        <div class="analysis-logo">
+          <div class="scan-rings">
+            <div class="scan-ring sr-1"></div>
+            <div class="scan-ring sr-2"></div>
+            <div class="scan-ring sr-3"></div>
+          </div>
+          <div class="analysis-img-wrap">
+            <img src="/static/images/hacker.png"
+                 class="analysis-hacker-img"
+                 alt="Analyzing" />
+            <div class="img-scanline"></div>
+            <div class="img-crt"></div>
+          </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="analysis-steps" id="analysis-steps">
+          <div class="step" id="step-1">
+            <span class="step-icon">⏳</span>
+            <span class="step-text">Reading video frames...</span>
+          </div>
+          <div class="step" id="step-2">
+            <span class="step-icon">⏳</span>
+            <span class="step-text">Detecting faces...</span>
+          </div>
+          <div class="step" id="step-3">
+            <span class="step-icon">⏳</span>
+            <span class="step-text">Analyzing frequency patterns...</span>
+          </div>
+          <div class="step" id="step-4">
+            <span class="step-icon">⏳</span>
+            <span class="step-text">Measuring physiological signals...</span>
+          </div>
+          <div class="step" id="step-5">
+            <span class="step-icon">⏳</span>
+            <span class="step-text">Running fusion model...</span>
+          </div>
+        </div>
+
+        <!-- Batch progress -->
+        <div class="batch-progress-wrap" id="batch-progress-wrap"
+             style="display:none">
+          <div class="batch-progress-label">
+            <span id="batch-progress-text">0 / 0 videos analyzed</span>
+          </div>
+          <div class="batch-progress-bar">
+            <div class="batch-progress-fill"
+                 id="batch-progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- Rotating facts -->
+        <div class="facts-box">
+          <div class="facts-label">💡 Did you know?</div>
+          <div class="facts-text" id="facts-text">
+            Deepfakes can alter micro-expressions invisible to the human eye.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SINGLE RESULT SECTION -->
+    <section class="result-section"
+             id="single-result-section"
+             style="display:none">
+
+      <div class="result-card" id="single-result-card">
+
+        <div class="result-header">
+          <div class="result-badge" id="result-badge">
+            <span class="result-icon"  id="result-icon"></span>
+            <span class="result-label" id="result-label"></span>
+          </div>
+          <div class="result-filename" id="result-filename"></div>
+        </div>
+
+        <div class="result-meter-wrap">
+
+          <div class="prob-ring-wrap">
+            <svg viewBox="0 0 120 120" class="prob-ring">
+              <circle cx="60" cy="60" r="50"
+                      fill="none"
+                      stroke="rgba(255,255,255,0.05)"
+                      stroke-width="10"/>
+              <circle cx="60" cy="60" r="50"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="10"
+                      stroke-dasharray="314"
+                      stroke-dashoffset="314"
+                      stroke-linecap="round"
+                      transform="rotate(-90 60 60)"
+                      id="prob-ring-circle"
+                      class="ring-circle"/>
+            </svg>
+            <div class="prob-ring-text">
+              <span class="prob-percent" id="prob-percent">0%</span>
+              <span class="prob-ring-label">fake</span>
+            </div>
+          </div>
+
+          <div class="result-stats">
+            <div class="stat-row">
+              <span class="stat-label">Fake Probability</span>
+              <div class="stat-bar-wrap">
+                <div class="stat-bar">
+                  <div class="stat-bar-fill" id="fake-bar-fill"></div>
+                </div>
+                <span class="stat-val" id="fake-val">0%</span>
+              </div>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Real Probability</span>
+              <div class="stat-bar-wrap">
+                <div class="stat-bar">
+                  <div class="stat-bar-fill real-fill"
+                       id="real-bar-fill"></div>
+                </div>
+                <span class="stat-val" id="real-val">0%</span>
+              </div>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Confidence</span>
+              <span class="stat-confidence" id="stat-confidence">—</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="result-meta">
+          <div class="meta-chip">
+            <span class="meta-icon">⏱</span>
+            <span id="meta-time">—</span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-icon">💻</span>
+            <span id="meta-device">—</span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-icon">🕐</span>
+            <span id="meta-timestamp">—</span>
+          </div>
+        </div>
+
+        <div class="analysis-chips">
+          <span class="chip chip-done">✅ Spatial cues checked</span>
+          <span class="chip chip-done">✅ Frequency artifacts checked</span>
+          <span class="chip chip-done">✅ Physiological consistency checked</span>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn-analyze"
+                  onclick="downloadSingleResult()">
+            <span class="btn-icon">📥</span>
+            <span>Download Result</span>
+          </button>
+          <button class="btn-clear" onclick="resetToUpload()">
+            🔄 Analyze Another
+          </button>
+        </div>
+
+      </div>
+
+      <canvas id="confetti-canvas"></canvas>
+
+    </section>
+
+    <!-- BATCH RESULT SECTION -->
+    <section class="result-section"
+             id="batch-result-section"
+             style="display:none">
+
+      <div class="batch-summary" id="batch-summary">
+        <div class="summary-stat">
+          <span class="summary-num" id="summary-total">0</span>
+          <span class="summary-lbl">Total</span>
+        </div>
+        <div class="summary-stat real-stat">
+          <span class="summary-num" id="summary-real">0</span>
+          <span class="summary-lbl">Real</span>
+        </div>
+        <div class="summary-stat fake-stat">
+          <span class="summary-num" id="summary-fake">0</span>
+          <span class="summary-lbl">Fake</span>
+        </div>
+        <div class="summary-stat">
+          <span class="summary-num" id="summary-time">—</span>
+          <span class="summary-lbl">Avg Time</span>
+        </div>
+      </div>
+
+      <div class="fake-rate-bar-wrap" id="fake-rate-bar-wrap"
+           style="display:none">
+        <div class="fake-rate-label">
+          <span>Overall Fake Rate</span>
+          <span id="fake-rate-pct">0%</span>
+        </div>
+        <div class="fake-rate-bar">
+          <div class="fake-rate-fill" id="fake-rate-fill"></div>
+        </div>
+      </div>
+
+      <div class="batch-cards-grid" id="batch-cards-grid"></div>
+
+      <div class="batch-download-wrap" id="batch-download-wrap"
+           style="display:none">
+        <p class="batch-done-note">
+          ⚠️ Results are not stored on the server.
+          Download before leaving this page.
+        </p>
+        <div class="batch-download-btns">
+          <button class="btn-download-csv" id="btn-dl-csv">
+            <span>📊</span> Download CSV
+          </button>
+          <button class="btn-download-json" id="btn-dl-json">
+            <span>📋</span> Download JSON
+          </button>
+          <button class="btn-clear" onclick="resetToUpload()">
+            🔄 New Batch
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TOASTS -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>
+        TriGuard-DF &nbsp;·&nbsp;
+        Three-Branch Deepfake Detection &nbsp;·&nbsp;
+        Results are session-only and never stored on the server.
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
