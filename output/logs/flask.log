@@ -1,0 +1,1119 @@
+2026-04-14 15:45:09,269  INFO  Loading TriGuard model …
+2026-04-14 15:45:09,271  INFO  ============================================================
+2026-04-14 15:45:09,272  INFO    TriGuard-DF Flask Server
+2026-04-14 15:45:09,272  INFO    http://127.0.0.1:5000
+2026-04-14 15:45:09,273  INFO  ============================================================
+2026-04-14 15:45:12,179  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.38.114.98:5000
+2026-04-14 15:45:12,180  INFO  [33mPress CTRL+C to quit[0m
+2026-04-14 15:45:19,067  INFO  10.38.114.98 - - [14/Apr/2026 15:45:19] "GET / HTTP/1.1" 200 -
+2026-04-14 15:45:19,567  INFO  10.38.114.98 - - [14/Apr/2026 15:45:19] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-14 15:45:19,610  INFO  10.38.114.98 - - [14/Apr/2026 15:45:19] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-04-14 15:45:19,869  INFO  10.38.114.98 - - [14/Apr/2026 15:45:19] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:20,130  INFO  10.38.114.98 - - [14/Apr/2026 15:45:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-14 15:45:26,289  INFO  127.0.0.1 - - [14/Apr/2026 15:45:26] "GET / HTTP/1.1" 200 -
+2026-04-14 15:45:26,320  INFO  127.0.0.1 - - [14/Apr/2026 15:45:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-14 15:45:26,430  INFO  127.0.0.1 - - [14/Apr/2026 15:45:26] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-04-14 15:45:26,960  INFO  127.0.0.1 - - [14/Apr/2026 15:45:26] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:27,360  INFO  127.0.0.1 - - [14/Apr/2026 15:45:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-14 15:45:29,155  INFO  127.0.0.1 - - [14/Apr/2026 15:45:29] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:31,222  INFO  127.0.0.1 - - [14/Apr/2026 15:45:31] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:33,279  INFO  127.0.0.1 - - [14/Apr/2026 15:45:33] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:35,296  INFO  127.0.0.1 - - [14/Apr/2026 15:45:35] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:37,457  INFO  127.0.0.1 - - [14/Apr/2026 15:45:37] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:39,545  INFO  127.0.0.1 - - [14/Apr/2026 15:45:39] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:41,556  INFO  127.0.0.1 - - [14/Apr/2026 15:45:41] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:43,097  INFO  MediaPipe loaded for face detection
+2026-04-14 15:45:43,199  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-14 15:45:43,567  INFO  127.0.0.1 - - [14/Apr/2026 15:45:43] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:45:43,939  INFO    Checkpoint epoch : 11
+2026-04-14 15:45:43,940  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-14 15:45:43,940  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-14 15:45:44,723  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-14 15:45:44,729  INFO  TriGuardInference ready on cpu
+2026-04-14 15:45:44,729  INFO  Model loaded successfully.
+2026-04-14 15:45:45,581  INFO  127.0.0.1 - - [14/Apr/2026 15:45:45] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:46:03,622  INFO  Single predict: 28_16__kitchen_still__U757192N.mp4 → output\uploads\e785b444_28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:46:03,624  INFO  Preprocessing: e785b444_28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:46:04,276  INFO    Video has 780 frames, reading up to 150
+2026-04-14 15:46:07,878  INFO    Using 150 frames
+2026-04-14 15:46:08,306  INFO    Face detections: 30/30 attempts
+2026-04-14 15:46:09,277  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:46:10,407  INFO    → FAKE (fake_prob=0.9807, 6.8s)
+2026-04-14 15:46:10,408  INFO  Result: FAKE (fake=0.9807)
+2026-04-14 15:46:10,415  INFO  127.0.0.1 - - [14/Apr/2026 15:46:10] "POST /predict HTTP/1.1" 200 -
+2026-04-14 15:49:40,852  INFO  127.0.0.1 - - [14/Apr/2026 15:49:40] "GET / HTTP/1.1" 200 -
+2026-04-14 15:49:40,909  INFO  127.0.0.1 - - [14/Apr/2026 15:49:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:49:40,913  INFO  127.0.0.1 - - [14/Apr/2026 15:49:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:49:40,947  INFO  127.0.0.1 - - [14/Apr/2026 15:49:40] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:49:42,633  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "GET / HTTP/1.1" 200 -
+2026-04-14 15:49:42,674  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:49:42,679  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:49:42,696  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:49:42,793  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "GET / HTTP/1.1" 200 -
+2026-04-14 15:49:42,840  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:49:42,842  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:49:42,858  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:49:42,942  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "GET / HTTP/1.1" 200 -
+2026-04-14 15:49:42,993  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:49:42,995  INFO  127.0.0.1 - - [14/Apr/2026 15:49:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:49:43,011  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:49:43,093  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "GET / HTTP/1.1" 200 -
+2026-04-14 15:49:43,142  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:49:43,145  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:49:43,158  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:49:43,325  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "GET / HTTP/1.1" 200 -
+2026-04-14 15:49:43,380  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:49:43,384  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:49:43,402  INFO  127.0.0.1 - - [14/Apr/2026 15:49:43] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:49:56,867  INFO  Loading TriGuard model …
+2026-04-14 15:49:56,871  INFO  ============================================================
+2026-04-14 15:49:56,872  INFO    TriGuard-DF Flask Server
+2026-04-14 15:49:56,873  INFO    http://127.0.0.1:5000
+2026-04-14 15:49:56,874  INFO  ============================================================
+2026-04-14 15:49:56,936  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.38.114.98:5000
+2026-04-14 15:49:56,936  INFO  [33mPress CTRL+C to quit[0m
+2026-04-14 15:50:05,479  INFO  127.0.0.1 - - [14/Apr/2026 15:50:05] "GET / HTTP/1.1" 200 -
+2026-04-14 15:50:05,597  INFO  127.0.0.1 - - [14/Apr/2026 15:50:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:50:05,615  INFO  127.0.0.1 - - [14/Apr/2026 15:50:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:50:05,754  INFO  127.0.0.1 - - [14/Apr/2026 15:50:05] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:50:06,982  INFO  MediaPipe loaded for face detection
+2026-04-14 15:50:07,013  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-14 15:50:07,471  INFO    Checkpoint epoch : 11
+2026-04-14 15:50:07,471  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-14 15:50:07,471  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-14 15:50:07,850  INFO  127.0.0.1 - - [14/Apr/2026 15:50:07] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:50:08,470  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-14 15:50:08,478  INFO  TriGuardInference ready on cpu
+2026-04-14 15:50:08,479  INFO  Model loaded successfully.
+2026-04-14 15:50:09,872  INFO  127.0.0.1 - - [14/Apr/2026 15:50:09] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:50:25,898  INFO  Single predict: 28_16__kitchen_still__U757192N.mp4 → output\uploads\a9cb2ddf_28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:50:25,903  INFO  Preprocessing: a9cb2ddf_28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:50:26,065  INFO    Video has 780 frames, reading up to 150
+2026-04-14 15:50:30,328  INFO    Using 150 frames
+2026-04-14 15:50:30,938  INFO    Face detections: 30/30 attempts
+2026-04-14 15:50:32,218  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:50:34,642  INFO    → FAKE (fake_prob=0.9807, 8.7s)
+2026-04-14 15:50:34,644  INFO  Result: FAKE (fake=0.9807)
+2026-04-14 15:50:34,663  INFO  127.0.0.1 - - [14/Apr/2026 15:50:34] "POST /predict HTTP/1.1" 200 -
+2026-04-14 15:51:36,894  INFO  Batch job 910a3b9e4217436881079706df07b07d: 10 videos queued
+2026-04-14 15:51:36,896  INFO  Batch worker started: 910a3b9e4217436881079706df07b07d
+2026-04-14 15:51:36,897  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__walking_down_street_outside_angry__U757192N.mp4
+2026-04-14 15:51:36,898  INFO  Preprocessing: eee68aff_28_16__walking_down_street_outside_angry__U757192N.mp4
+2026-04-14 15:51:36,922  INFO  127.0.0.1 - - [14/Apr/2026 15:51:36] "POST /batch/start HTTP/1.1" 200 -
+2026-04-14 15:51:36,960  INFO    Video has 1157 frames, reading up to 150
+2026-04-14 15:51:38,947  INFO  127.0.0.1 - - [14/Apr/2026 15:51:38] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:39,894  INFO    Using 150 frames
+2026-04-14 15:51:40,953  INFO  127.0.0.1 - - [14/Apr/2026 15:51:40] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:42,837  INFO    Face detections: 30/30 attempts
+2026-04-14 15:51:42,950  INFO  127.0.0.1 - - [14/Apr/2026 15:51:42] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:43,564  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:51:44,944  INFO  127.0.0.1 - - [14/Apr/2026 15:51:44] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:45,056  INFO    → FAKE (fake_prob=0.9740, 8.2s)
+2026-04-14 15:51:45,061  INFO    [910a3b9e4217436881079706df07b07d] Done 1/10
+2026-04-14 15:51:45,062  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-14 15:51:45,066  INFO  Preprocessing: 35e257e9_28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-14 15:51:45,155  INFO    Video has 1180 frames, reading up to 150
+2026-04-14 15:51:46,941  INFO  127.0.0.1 - - [14/Apr/2026 15:51:46] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:48,066  INFO    Using 150 frames
+2026-04-14 15:51:48,946  INFO  127.0.0.1 - - [14/Apr/2026 15:51:48] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:50,171  INFO    Face detections: 30/30 attempts
+2026-04-14 15:51:50,859  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:51:51,140  INFO  127.0.0.1 - - [14/Apr/2026 15:51:51] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:52,253  INFO    → FAKE (fake_prob=0.9809, 7.2s)
+2026-04-14 15:51:52,257  INFO    [910a3b9e4217436881079706df07b07d] Done 2/10
+2026-04-14 15:51:52,259  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__walking_outside_cafe_disgusted__NAZP864W.mp4
+2026-04-14 15:51:52,260  INFO  Preprocessing: f72d031e_28_16__walking_outside_cafe_disgusted__NAZP864W.mp4
+2026-04-14 15:51:52,337  INFO    Video has 373 frames, reading up to 150
+2026-04-14 15:51:52,947  INFO  127.0.0.1 - - [14/Apr/2026 15:51:52] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:54,940  INFO  127.0.0.1 - - [14/Apr/2026 15:51:54] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:55,182  INFO    Using 150 frames
+2026-04-14 15:51:56,128  INFO    Face detections: 29/30 attempts
+2026-04-14 15:51:56,940  INFO  127.0.0.1 - - [14/Apr/2026 15:51:56] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:51:56,974  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:51:58,411  INFO    → FAKE (fake_prob=0.9639, 6.2s)
+2026-04-14 15:51:58,415  INFO    [910a3b9e4217436881079706df07b07d] Done 3/10
+2026-04-14 15:51:58,416  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:51:58,417  INFO  Preprocessing: 7506f58f_28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:51:58,497  INFO    Video has 780 frames, reading up to 150
+2026-04-14 15:51:58,941  INFO  127.0.0.1 - - [14/Apr/2026 15:51:58] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:00,944  INFO  127.0.0.1 - - [14/Apr/2026 15:52:00] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:01,184  INFO    Using 150 frames
+2026-04-14 15:52:01,471  INFO    Face detections: 30/30 attempts
+2026-04-14 15:52:02,110  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:52:02,943  INFO  127.0.0.1 - - [14/Apr/2026 15:52:02] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:03,531  INFO    → FAKE (fake_prob=0.9807, 5.1s)
+2026-04-14 15:52:03,537  INFO    [910a3b9e4217436881079706df07b07d] Done 4/10
+2026-04-14 15:52:03,539  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__podium_speech_happy__6DWLCU6T.mp4
+2026-04-14 15:52:03,542  INFO  Preprocessing: ca89513e_28_16__podium_speech_happy__6DWLCU6T.mp4
+2026-04-14 15:52:03,605  INFO    Video has 951 frames, reading up to 150
+2026-04-14 15:52:04,940  INFO  127.0.0.1 - - [14/Apr/2026 15:52:04] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:06,572  INFO    Using 150 frames
+2026-04-14 15:52:07,043  INFO  127.0.0.1 - - [14/Apr/2026 15:52:07] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:07,346  INFO    Face detections: 30/30 attempts
+2026-04-14 15:52:07,766  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:52:08,690  INFO    → FAKE (fake_prob=0.9785, 5.1s)
+2026-04-14 15:52:08,695  INFO    [910a3b9e4217436881079706df07b07d] Done 5/10
+2026-04-14 15:52:08,695  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-14 15:52:08,696  INFO  Preprocessing: f7514891_28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-14 15:52:08,751  INFO    Video has 951 frames, reading up to 150
+2026-04-14 15:52:08,968  INFO  127.0.0.1 - - [14/Apr/2026 15:52:08] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:10,495  INFO    Using 150 frames
+2026-04-14 15:52:10,976  INFO  127.0.0.1 - - [14/Apr/2026 15:52:10] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:11,191  INFO    Face detections: 30/30 attempts
+2026-04-14 15:52:11,673  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:52:12,470  INFO    → FAKE (fake_prob=0.9792, 3.8s)
+2026-04-14 15:52:12,474  INFO    [910a3b9e4217436881079706df07b07d] Done 6/10
+2026-04-14 15:52:12,475  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__secret_conversation__R1QD0XDQ.mp4
+2026-04-14 15:52:12,476  INFO  Preprocessing: 843b6ff2_28_16__secret_conversation__R1QD0XDQ.mp4
+2026-04-14 15:52:12,550  INFO    Video has 585 frames, reading up to 150
+2026-04-14 15:52:12,967  INFO  127.0.0.1 - - [14/Apr/2026 15:52:12] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:14,022  INFO    Using 150 frames
+2026-04-14 15:52:14,431  INFO    Face detections: 30/30 attempts
+2026-04-14 15:52:14,967  INFO  127.0.0.1 - - [14/Apr/2026 15:52:14] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:15,229  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:52:16,213  INFO    → FAKE (fake_prob=0.9788, 3.7s)
+2026-04-14 15:52:16,216  INFO    [910a3b9e4217436881079706df07b07d] Done 7/10
+2026-04-14 15:52:16,216  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__secret_conversation__X5FNCYON.mp4
+2026-04-14 15:52:16,218  INFO  Preprocessing: b362fe4a_28_16__secret_conversation__X5FNCYON.mp4
+2026-04-14 15:52:16,264  INFO    Video has 43 frames, reading up to 150
+2026-04-14 15:52:16,936  INFO  127.0.0.1 - - [14/Apr/2026 15:52:16] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:17,279  INFO    Using 150 frames
+2026-04-14 15:52:18,508  INFO    Face detections: 30/30 attempts
+2026-04-14 15:52:18,948  INFO  127.0.0.1 - - [14/Apr/2026 15:52:18] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:19,376  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:52:20,759  INFO    → FAKE (fake_prob=0.9801, 4.5s)
+2026-04-14 15:52:20,762  INFO    [910a3b9e4217436881079706df07b07d] Done 8/10
+2026-04-14 15:52:20,763  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_16__secret_conversation__ZA8XJIE9.mp4
+2026-04-14 15:52:20,764  INFO  Preprocessing: dd882369_28_16__secret_conversation__ZA8XJIE9.mp4
+2026-04-14 15:52:20,847  INFO    Video has 43 frames, reading up to 150
+2026-04-14 15:52:20,943  INFO  127.0.0.1 - - [14/Apr/2026 15:52:20] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:22,302  INFO    Using 150 frames
+2026-04-14 15:52:22,944  INFO  127.0.0.1 - - [14/Apr/2026 15:52:22] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:23,954  INFO    Face detections: 30/30 attempts
+2026-04-14 15:52:24,512  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:52:24,970  INFO  127.0.0.1 - - [14/Apr/2026 15:52:24] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:25,203  INFO    → FAKE (fake_prob=0.9802, 4.4s)
+2026-04-14 15:52:25,205  INFO    [910a3b9e4217436881079706df07b07d] Done 9/10
+2026-04-14 15:52:25,205  INFO    [910a3b9e4217436881079706df07b07d] Processing: 28_08__podium_speech_happy__KXO8S7OP.mp4
+2026-04-14 15:52:25,206  INFO  Preprocessing: 05f9d39c_28_08__podium_speech_happy__KXO8S7OP.mp4
+2026-04-14 15:52:25,242  INFO    Video has 949 frames, reading up to 150
+2026-04-14 15:52:26,589  INFO    Using 150 frames
+2026-04-14 15:52:26,977  INFO  127.0.0.1 - - [14/Apr/2026 15:52:26] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:52:27,292  INFO    Face detections: 30/30 attempts
+2026-04-14 15:52:27,750  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:52:28,579  INFO    → FAKE (fake_prob=0.9797, 3.4s)
+2026-04-14 15:52:28,583  INFO    [910a3b9e4217436881079706df07b07d] Done 10/10
+2026-04-14 15:52:28,583  INFO  Batch job 910a3b9e4217436881079706df07b07d complete.
+2026-04-14 15:52:28,963  INFO  127.0.0.1 - - [14/Apr/2026 15:52:28] "GET /batch/status/910a3b9e4217436881079706df07b07d HTTP/1.1" 200 -
+2026-04-14 15:53:20,879  INFO  Batch job 9796bfb176384344b0e16884741367b6: 10 videos queued
+2026-04-14 15:53:20,881  INFO  Batch worker started: 9796bfb176384344b0e16884741367b6
+2026-04-14 15:53:20,882  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__walking_down_street_outside_angry__U757192N.mp4
+2026-04-14 15:53:20,883  INFO  Preprocessing: eb505631_28_16__walking_down_street_outside_angry__U757192N.mp4
+2026-04-14 15:53:20,904  INFO  127.0.0.1 - - [14/Apr/2026 15:53:20] "POST /batch/start HTTP/1.1" 200 -
+2026-04-14 15:53:20,946  INFO    Video has 1157 frames, reading up to 150
+2026-04-14 15:53:22,937  INFO  127.0.0.1 - - [14/Apr/2026 15:53:22] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:23,598  INFO    Using 150 frames
+2026-04-14 15:53:24,953  INFO  127.0.0.1 - - [14/Apr/2026 15:53:24] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:26,518  INFO    Face detections: 30/30 attempts
+2026-04-14 15:53:26,941  INFO  127.0.0.1 - - [14/Apr/2026 15:53:26] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:27,038  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:53:28,078  INFO    → FAKE (fake_prob=0.9740, 7.2s)
+2026-04-14 15:53:28,080  INFO    [9796bfb176384344b0e16884741367b6] Done 1/10
+2026-04-14 15:53:28,080  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-14 15:53:28,081  INFO  Preprocessing: e51c804a_28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-14 15:53:28,157  INFO    Video has 1180 frames, reading up to 150
+2026-04-14 15:53:28,944  INFO  127.0.0.1 - - [14/Apr/2026 15:53:28] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:30,954  INFO  127.0.0.1 - - [14/Apr/2026 15:53:30] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:31,716  INFO    Using 150 frames
+2026-04-14 15:53:32,947  INFO  127.0.0.1 - - [14/Apr/2026 15:53:32] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:34,716  INFO    Face detections: 30/30 attempts
+2026-04-14 15:53:34,948  INFO  127.0.0.1 - - [14/Apr/2026 15:53:34] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:35,186  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:53:36,323  INFO    → FAKE (fake_prob=0.9809, 8.2s)
+2026-04-14 15:53:36,327  INFO    [9796bfb176384344b0e16884741367b6] Done 2/10
+2026-04-14 15:53:36,328  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__walking_outside_cafe_disgusted__NAZP864W.mp4
+2026-04-14 15:53:36,329  INFO  Preprocessing: 1524bbcb_28_16__walking_outside_cafe_disgusted__NAZP864W.mp4
+2026-04-14 15:53:36,407  INFO    Video has 373 frames, reading up to 150
+2026-04-14 15:53:36,962  INFO  127.0.0.1 - - [14/Apr/2026 15:53:36] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:38,953  INFO  127.0.0.1 - - [14/Apr/2026 15:53:38] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:40,373  INFO    Using 150 frames
+2026-04-14 15:53:40,950  INFO  127.0.0.1 - - [14/Apr/2026 15:53:40] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:41,868  INFO    Face detections: 29/30 attempts
+2026-04-14 15:53:42,445  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:53:42,942  INFO  127.0.0.1 - - [14/Apr/2026 15:53:42] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:43,522  INFO    → FAKE (fake_prob=0.9639, 7.2s)
+2026-04-14 15:53:43,524  INFO    [9796bfb176384344b0e16884741367b6] Done 3/10
+2026-04-14 15:53:43,525  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:53:43,526  INFO  Preprocessing: 440774ba_28_16__kitchen_still__U757192N.mp4
+2026-04-14 15:53:43,589  INFO    Video has 780 frames, reading up to 150
+2026-04-14 15:53:44,950  INFO  127.0.0.1 - - [14/Apr/2026 15:53:44] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:46,253  INFO    Using 150 frames
+2026-04-14 15:53:46,673  INFO    Face detections: 30/30 attempts
+2026-04-14 15:53:46,944  INFO  127.0.0.1 - - [14/Apr/2026 15:53:46] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:47,605  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:53:48,942  INFO  127.0.0.1 - - [14/Apr/2026 15:53:48] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:48,977  INFO    → FAKE (fake_prob=0.9807, 5.5s)
+2026-04-14 15:53:48,984  INFO    [9796bfb176384344b0e16884741367b6] Done 4/10
+2026-04-14 15:53:48,985  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__podium_speech_happy__6DWLCU6T.mp4
+2026-04-14 15:53:48,986  INFO  Preprocessing: d08afe4c_28_16__podium_speech_happy__6DWLCU6T.mp4
+2026-04-14 15:53:49,053  INFO    Video has 951 frames, reading up to 150
+2026-04-14 15:53:50,947  INFO  127.0.0.1 - - [14/Apr/2026 15:53:50] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:51,715  INFO    Using 150 frames
+2026-04-14 15:53:52,831  INFO    Face detections: 30/30 attempts
+2026-04-14 15:53:52,938  INFO  127.0.0.1 - - [14/Apr/2026 15:53:52] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:53,636  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:53:54,942  INFO  127.0.0.1 - - [14/Apr/2026 15:53:54] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:54,984  INFO    → FAKE (fake_prob=0.9785, 6.0s)
+2026-04-14 15:53:54,990  INFO    [9796bfb176384344b0e16884741367b6] Done 5/10
+2026-04-14 15:53:54,992  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-14 15:53:54,994  INFO  Preprocessing: 34117ccf_28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-14 15:53:55,068  INFO    Video has 951 frames, reading up to 150
+2026-04-14 15:53:56,943  INFO  127.0.0.1 - - [14/Apr/2026 15:53:56] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:58,001  INFO    Using 150 frames
+2026-04-14 15:53:58,951  INFO  127.0.0.1 - - [14/Apr/2026 15:53:58] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:53:59,126  INFO    Face detections: 30/30 attempts
+2026-04-14 15:53:59,946  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:54:00,942  INFO  127.0.0.1 - - [14/Apr/2026 15:54:00] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:01,319  INFO    → FAKE (fake_prob=0.9792, 6.3s)
+2026-04-14 15:54:01,330  INFO    [9796bfb176384344b0e16884741367b6] Done 6/10
+2026-04-14 15:54:01,331  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__secret_conversation__R1QD0XDQ.mp4
+2026-04-14 15:54:01,332  INFO  Preprocessing: a50dce74_28_16__secret_conversation__R1QD0XDQ.mp4
+2026-04-14 15:54:01,419  INFO    Video has 585 frames, reading up to 150
+2026-04-14 15:54:02,944  INFO  127.0.0.1 - - [14/Apr/2026 15:54:02] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:04,329  INFO    Using 150 frames
+2026-04-14 15:54:04,918  INFO    Face detections: 30/30 attempts
+2026-04-14 15:54:04,944  INFO  127.0.0.1 - - [14/Apr/2026 15:54:04] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:05,899  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:54:06,948  INFO  127.0.0.1 - - [14/Apr/2026 15:54:06] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:07,443  INFO    → FAKE (fake_prob=0.9788, 6.1s)
+2026-04-14 15:54:07,450  INFO    [9796bfb176384344b0e16884741367b6] Done 7/10
+2026-04-14 15:54:07,452  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__secret_conversation__X5FNCYON.mp4
+2026-04-14 15:54:07,455  INFO  Preprocessing: 88b5ed9f_28_16__secret_conversation__X5FNCYON.mp4
+2026-04-14 15:54:07,559  INFO    Video has 43 frames, reading up to 150
+2026-04-14 15:54:08,947  INFO  127.0.0.1 - - [14/Apr/2026 15:54:08] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:09,096  INFO    Using 150 frames
+2026-04-14 15:54:10,951  INFO  127.0.0.1 - - [14/Apr/2026 15:54:10] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:10,953  INFO    Face detections: 30/30 attempts
+2026-04-14 15:54:11,789  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:54:12,956  INFO  127.0.0.1 - - [14/Apr/2026 15:54:12] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:13,216  INFO    → FAKE (fake_prob=0.9800, 5.8s)
+2026-04-14 15:54:13,221  INFO    [9796bfb176384344b0e16884741367b6] Done 8/10
+2026-04-14 15:54:13,222  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_16__secret_conversation__ZA8XJIE9.mp4
+2026-04-14 15:54:13,223  INFO  Preprocessing: 6d6d0cf2_28_16__secret_conversation__ZA8XJIE9.mp4
+2026-04-14 15:54:13,303  INFO    Video has 43 frames, reading up to 150
+2026-04-14 15:54:14,758  INFO    Using 150 frames
+2026-04-14 15:54:14,949  INFO  127.0.0.1 - - [14/Apr/2026 15:54:14] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:16,471  INFO    Face detections: 30/30 attempts
+2026-04-14 15:54:16,952  INFO  127.0.0.1 - - [14/Apr/2026 15:54:16] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:17,322  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:54:18,718  INFO    → FAKE (fake_prob=0.9802, 5.5s)
+2026-04-14 15:54:18,721  INFO    [9796bfb176384344b0e16884741367b6] Done 9/10
+2026-04-14 15:54:18,722  INFO    [9796bfb176384344b0e16884741367b6] Processing: 28_08__podium_speech_happy__KXO8S7OP.mp4
+2026-04-14 15:54:18,724  INFO  Preprocessing: 5d43235c_28_08__podium_speech_happy__KXO8S7OP.mp4
+2026-04-14 15:54:18,803  INFO    Video has 949 frames, reading up to 150
+2026-04-14 15:54:18,950  INFO  127.0.0.1 - - [14/Apr/2026 15:54:18] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:20,949  INFO  127.0.0.1 - - [14/Apr/2026 15:54:20] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:21,548  INFO    Using 150 frames
+2026-04-14 15:54:22,575  INFO    Face detections: 30/30 attempts
+2026-04-14 15:54:22,945  INFO  127.0.0.1 - - [14/Apr/2026 15:54:22] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:23,491  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 15:54:24,625  INFO    → FAKE (fake_prob=0.9797, 5.9s)
+2026-04-14 15:54:24,632  INFO    [9796bfb176384344b0e16884741367b6] Done 10/10
+2026-04-14 15:54:24,633  INFO  Batch job 9796bfb176384344b0e16884741367b6 complete.
+2026-04-14 15:54:24,943  INFO  127.0.0.1 - - [14/Apr/2026 15:54:24] "GET /batch/status/9796bfb176384344b0e16884741367b6 HTTP/1.1" 200 -
+2026-04-14 15:54:44,338  INFO  127.0.0.1 - - [14/Apr/2026 15:54:44] "GET /batch/download/9796bfb176384344b0e16884741367b6?format=csv HTTP/1.1" 200 -
+2026-04-14 15:54:58,901  INFO  127.0.0.1 - - [14/Apr/2026 15:54:58] "GET / HTTP/1.1" 200 -
+2026-04-14 15:54:58,952  INFO  127.0.0.1 - - [14/Apr/2026 15:54:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:54:58,956  INFO  127.0.0.1 - - [14/Apr/2026 15:54:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:54:58,978  INFO  127.0.0.1 - - [14/Apr/2026 15:54:58] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:56:04,376  INFO  127.0.0.1 - - [14/Apr/2026 15:56:04] "GET / HTTP/1.1" 200 -
+2026-04-14 15:56:04,430  INFO  127.0.0.1 - - [14/Apr/2026 15:56:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:56:04,433  INFO  127.0.0.1 - - [14/Apr/2026 15:56:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:56:04,460  INFO  127.0.0.1 - - [14/Apr/2026 15:56:04] "GET /health HTTP/1.1" 200 -
+2026-04-14 15:56:21,345  INFO  Loading TriGuard model …
+2026-04-14 15:56:21,349  INFO  ============================================================
+2026-04-14 15:56:21,350  INFO    TriGuard-DF Flask Server
+2026-04-14 15:56:21,350  INFO    http://127.0.0.1:5000
+2026-04-14 15:56:21,350  INFO  ============================================================
+2026-04-14 15:56:21,386  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.38.114.98:5000
+2026-04-14 15:56:21,387  INFO  [33mPress CTRL+C to quit[0m
+2026-04-14 15:56:21,750  INFO  127.0.0.1 - - [14/Apr/2026 15:56:21] "GET / HTTP/1.1" 200 -
+2026-04-14 15:56:21,823  INFO  127.0.0.1 - - [14/Apr/2026 15:56:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 15:56:21,850  INFO  127.0.0.1 - - [14/Apr/2026 15:56:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 15:56:22,048  INFO  127.0.0.1 - - [14/Apr/2026 15:56:22] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:24,059  INFO  127.0.0.1 - - [14/Apr/2026 15:56:24] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:26,072  INFO  127.0.0.1 - - [14/Apr/2026 15:56:26] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:28,086  INFO  127.0.0.1 - - [14/Apr/2026 15:56:28] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:30,099  INFO  127.0.0.1 - - [14/Apr/2026 15:56:30] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:32,120  INFO  127.0.0.1 - - [14/Apr/2026 15:56:32] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:34,132  INFO  127.0.0.1 - - [14/Apr/2026 15:56:34] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:36,149  INFO  127.0.0.1 - - [14/Apr/2026 15:56:36] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 15:56:36,854  INFO  MediaPipe loaded for face detection
+2026-04-14 15:56:36,924  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-14 15:56:37,426  INFO    Checkpoint epoch : 11
+2026-04-14 15:56:37,427  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-14 15:56:37,428  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-14 15:56:38,129  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-14 15:56:38,135  INFO  TriGuardInference ready on cpu
+2026-04-14 15:56:38,135  INFO  Model loaded successfully.
+2026-04-14 15:56:38,166  INFO  127.0.0.1 - - [14/Apr/2026 15:56:38] "GET /health HTTP/1.1" 200 -
+2026-04-14 16:13:37,286  INFO  127.0.0.1 - - [14/Apr/2026 16:13:37] "GET / HTTP/1.1" 200 -
+2026-04-14 16:13:37,361  INFO  127.0.0.1 - - [14/Apr/2026 16:13:37] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-14 16:13:37,408  INFO  127.0.0.1 - - [14/Apr/2026 16:13:37] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-04-14 16:13:37,431  INFO  127.0.0.1 - - [14/Apr/2026 16:13:37] "GET /health HTTP/1.1" 200 -
+2026-04-14 16:14:24,367  INFO  Loading TriGuard model …
+2026-04-14 16:14:24,371  INFO  ============================================================
+2026-04-14 16:14:24,373  INFO    TriGuard-DF Flask Server
+2026-04-14 16:14:24,374  INFO    http://127.0.0.1:5000
+2026-04-14 16:14:24,375  INFO  ============================================================
+2026-04-14 16:14:24,435  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.38.114.98:5000
+2026-04-14 16:14:24,437  INFO  [33mPress CTRL+C to quit[0m
+2026-04-14 16:14:24,997  INFO  127.0.0.1 - - [14/Apr/2026 16:14:24] "GET / HTTP/1.1" 200 -
+2026-04-14 16:14:25,259  INFO  127.0.0.1 - - [14/Apr/2026 16:14:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 16:14:25,274  INFO  127.0.0.1 - - [14/Apr/2026 16:14:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 16:14:25,275  INFO  127.0.0.1 - - [14/Apr/2026 16:14:25] "GET /static/images/hacker.png HTTP/1.1" 200 -
+2026-04-14 16:14:25,382  INFO  127.0.0.1 - - [14/Apr/2026 16:14:25] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:27,410  INFO  127.0.0.1 - - [14/Apr/2026 16:14:27] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:29,425  INFO  127.0.0.1 - - [14/Apr/2026 16:14:29] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:31,457  INFO  127.0.0.1 - - [14/Apr/2026 16:14:31] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:33,480  INFO  127.0.0.1 - - [14/Apr/2026 16:14:33] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:35,495  INFO  127.0.0.1 - - [14/Apr/2026 16:14:35] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:37,517  INFO  127.0.0.1 - - [14/Apr/2026 16:14:37] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:39,975  INFO  127.0.0.1 - - [14/Apr/2026 16:14:39] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:42,982  INFO  127.0.0.1 - - [14/Apr/2026 16:14:42] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:45,978  INFO  127.0.0.1 - - [14/Apr/2026 16:14:45] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:14:46,293  INFO  MediaPipe loaded for face detection
+2026-04-14 16:14:46,424  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-14 16:14:47,413  INFO    Checkpoint epoch : 11
+2026-04-14 16:14:47,414  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-14 16:14:47,415  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-14 16:14:48,787  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-14 16:14:48,794  INFO  TriGuardInference ready on cpu
+2026-04-14 16:14:48,794  INFO  Model loaded successfully.
+2026-04-14 16:14:48,977  INFO  127.0.0.1 - - [14/Apr/2026 16:14:48] "GET /health HTTP/1.1" 200 -
+2026-04-14 16:15:53,997  INFO  Loading TriGuard model …
+2026-04-14 16:15:54,002  INFO  ============================================================
+2026-04-14 16:15:54,002  INFO    TriGuard-DF Flask Server
+2026-04-14 16:15:54,002  INFO    http://127.0.0.1:5000
+2026-04-14 16:15:54,003  INFO  ============================================================
+2026-04-14 16:15:54,053  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.38.114.98:5000
+2026-04-14 16:15:54,054  INFO  [33mPress CTRL+C to quit[0m
+2026-04-14 16:15:56,400  INFO  127.0.0.1 - - [14/Apr/2026 16:15:56] "GET / HTTP/1.1" 200 -
+2026-04-14 16:15:57,042  INFO  127.0.0.1 - - [14/Apr/2026 16:15:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-14 16:15:57,071  INFO  127.0.0.1 - - [14/Apr/2026 16:15:57] "GET /static/images/hacker.png HTTP/1.1" 200 -
+2026-04-14 16:15:57,111  INFO  127.0.0.1 - - [14/Apr/2026 16:15:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 16:15:57,132  INFO  127.0.0.1 - - [14/Apr/2026 16:15:57] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:15:59,181  INFO  127.0.0.1 - - [14/Apr/2026 16:15:59] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:01,208  INFO  127.0.0.1 - - [14/Apr/2026 16:16:01] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:03,255  INFO  127.0.0.1 - - [14/Apr/2026 16:16:03] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:05,274  INFO  127.0.0.1 - - [14/Apr/2026 16:16:05] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:07,296  INFO  127.0.0.1 - - [14/Apr/2026 16:16:07] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:09,316  INFO  127.0.0.1 - - [14/Apr/2026 16:16:09] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:11,426  INFO  127.0.0.1 - - [14/Apr/2026 16:16:11] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:13,445  INFO  127.0.0.1 - - [14/Apr/2026 16:16:13] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:15,468  INFO  127.0.0.1 - - [14/Apr/2026 16:16:15] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:16,861  INFO  MediaPipe loaded for face detection
+2026-04-14 16:16:16,990  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-14 16:16:17,545  INFO  127.0.0.1 - - [14/Apr/2026 16:16:17] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-14 16:16:18,027  INFO    Checkpoint epoch : 11
+2026-04-14 16:16:18,028  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-14 16:16:18,029  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-14 16:16:19,370  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-14 16:16:19,378  INFO  TriGuardInference ready on cpu
+2026-04-14 16:16:19,379  INFO  Model loaded successfully.
+2026-04-14 16:16:19,563  INFO  127.0.0.1 - - [14/Apr/2026 16:16:19] "GET /health HTTP/1.1" 200 -
+2026-04-14 16:19:28,103  INFO  127.0.0.1 - - [14/Apr/2026 16:19:28] "GET / HTTP/1.1" 200 -
+2026-04-14 16:19:28,179  INFO  127.0.0.1 - - [14/Apr/2026 16:19:28] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-14 16:19:28,185  INFO  127.0.0.1 - - [14/Apr/2026 16:19:28] "[36mGET /static/images/hacker.png HTTP/1.1[0m" 304 -
+2026-04-14 16:19:28,189  INFO  127.0.0.1 - - [14/Apr/2026 16:19:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-14 16:19:28,224  INFO  127.0.0.1 - - [14/Apr/2026 16:19:28] "GET /health HTTP/1.1" 200 -
+2026-04-14 16:19:48,939  INFO  Single predict: 28__outside_talking_pan_laughing.mp4 → output\uploads\4b5e8cb0_28__outside_talking_pan_laughing.mp4
+2026-04-14 16:19:48,941  INFO  Preprocessing: 4b5e8cb0_28__outside_talking_pan_laughing.mp4
+2026-04-14 16:19:49,076  INFO    Video has 703 frames, reading up to 150
+2026-04-14 16:19:54,008  INFO    Using 150 frames
+2026-04-14 16:19:57,143  INFO    Face detections: 25/30 attempts
+2026-04-14 16:19:58,382  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-14 16:20:00,695  INFO    → REAL (fake_prob=0.0255, 11.8s)
+2026-04-14 16:20:00,698  INFO  Result: REAL (fake=0.0255)
+2026-04-14 16:20:00,709  INFO  127.0.0.1 - - [14/Apr/2026 16:20:00] "POST /predict HTTP/1.1" 200 -
+2026-04-20 14:53:19,614  INFO  Loading TriGuard model …
+2026-04-20 14:53:19,617  INFO  ============================================================
+2026-04-20 14:53:19,617  INFO    TriGuard-DF Flask Server
+2026-04-20 14:53:19,618  INFO    http://127.0.0.1:5000
+2026-04-20 14:53:19,618  INFO  ============================================================
+2026-04-20 14:53:22,313  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.31.20.98:5000
+2026-04-20 14:53:22,314  INFO  [33mPress CTRL+C to quit[0m
+2026-04-20 14:53:25,961  INFO  127.0.0.1 - - [20/Apr/2026 14:53:25] "GET / HTTP/1.1" 200 -
+2026-04-20 14:53:26,244  INFO  127.0.0.1 - - [20/Apr/2026 14:53:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-20 14:53:26,252  INFO  127.0.0.1 - - [20/Apr/2026 14:53:26] "GET /static/images/hacker.png HTTP/1.1" 200 -
+2026-04-20 14:53:26,267  INFO  127.0.0.1 - - [20/Apr/2026 14:53:26] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-04-20 14:53:31,316  INFO  127.0.0.1 - - [20/Apr/2026 14:53:31] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:31,475  INFO  127.0.0.1 - - [20/Apr/2026 14:53:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-20 14:53:33,355  INFO  127.0.0.1 - - [20/Apr/2026 14:53:33] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:35,375  INFO  127.0.0.1 - - [20/Apr/2026 14:53:35] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:37,397  INFO  127.0.0.1 - - [20/Apr/2026 14:53:37] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:39,440  INFO  127.0.0.1 - - [20/Apr/2026 14:53:39] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:41,544  INFO  127.0.0.1 - - [20/Apr/2026 14:53:41] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:43,659  INFO  127.0.0.1 - - [20/Apr/2026 14:53:43] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:45,835  INFO  127.0.0.1 - - [20/Apr/2026 14:53:45] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:48,036  INFO  127.0.0.1 - - [20/Apr/2026 14:53:48] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:50,213  INFO  127.0.0.1 - - [20/Apr/2026 14:53:50] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:52,286  INFO  127.0.0.1 - - [20/Apr/2026 14:53:52] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:54,310  INFO  127.0.0.1 - - [20/Apr/2026 14:53:54] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:56,329  INFO  127.0.0.1 - - [20/Apr/2026 14:53:56] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:53:58,349  INFO  127.0.0.1 - - [20/Apr/2026 14:53:58] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:54:00,383  INFO  127.0.0.1 - - [20/Apr/2026 14:54:00] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:54:01,639  INFO  MediaPipe loaded for face detection
+2026-04-20 14:54:01,807  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-20 14:54:02,402  INFO  127.0.0.1 - - [20/Apr/2026 14:54:02] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-20 14:54:02,873  INFO    Checkpoint epoch : 11
+2026-04-20 14:54:02,874  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-20 14:54:02,875  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-20 14:54:04,229  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-20 14:54:04,237  INFO  TriGuardInference ready on cpu
+2026-04-20 14:54:04,238  INFO  Model loaded successfully.
+2026-04-20 14:54:04,423  INFO  127.0.0.1 - - [20/Apr/2026 14:54:04] "GET /health HTTP/1.1" 200 -
+2026-04-20 14:54:28,368  INFO  Single predict: 27_25__exit_phone_room__1KU29EUL.mp4 → output\uploads\0199fc65_27_25__exit_phone_room__1KU29EUL.mp4
+2026-04-20 14:54:28,370  INFO  Preprocessing: 0199fc65_27_25__exit_phone_room__1KU29EUL.mp4
+2026-04-20 14:54:29,011  INFO    Video has 360 frames, reading up to 150
+2026-04-20 14:54:33,921  INFO    Using 150 frames
+2026-04-20 14:54:37,454  INFO    Face detections: 29/30 attempts
+2026-04-20 14:54:38,792  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-20 14:54:41,985  INFO    → FAKE (fake_prob=0.9797, 13.6s)
+2026-04-20 14:54:41,995  INFO  Result: FAKE (fake=0.9797)
+2026-04-20 14:54:42,010  INFO  127.0.0.1 - - [20/Apr/2026 14:54:42] "POST /predict HTTP/1.1" 200 -
+2026-04-27 19:02:49,091  INFO  Loading TriGuard model …
+2026-04-27 19:02:49,093  INFO  ============================================================
+2026-04-27 19:02:49,094  INFO    TriGuard-DF Flask Server
+2026-04-27 19:02:49,095  INFO    http://127.0.0.1:5000
+2026-04-27 19:02:49,095  INFO  ============================================================
+2026-04-27 19:02:49,151  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+2026-04-27 19:02:49,151  INFO  [33mPress CTRL+C to quit[0m
+2026-04-27 19:02:51,878  INFO  127.0.0.1 - - [27/Apr/2026 19:02:51] "GET / HTTP/1.1" 200 -
+2026-04-27 19:02:52,170  INFO  127.0.0.1 - - [27/Apr/2026 19:02:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-27 19:02:52,181  INFO  127.0.0.1 - - [27/Apr/2026 19:02:52] "GET /static/images/hacker.png HTTP/1.1" 200 -
+2026-04-27 19:02:52,203  INFO  127.0.0.1 - - [27/Apr/2026 19:02:52] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-04-27 19:02:52,283  INFO  127.0.0.1 - - [27/Apr/2026 19:02:52] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:02:52,312  INFO  127.0.0.1 - - [27/Apr/2026 19:02:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-27 19:02:54,312  INFO  127.0.0.1 - - [27/Apr/2026 19:02:54] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:02:56,323  INFO  127.0.0.1 - - [27/Apr/2026 19:02:56] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:03:02,926  INFO  127.0.0.1 - - [27/Apr/2026 19:03:02] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:03:05,659  INFO  127.0.0.1 - - [27/Apr/2026 19:03:05] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:03:08,354  INFO  127.0.0.1 - - [27/Apr/2026 19:03:08] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:03:11,382  INFO  127.0.0.1 - - [27/Apr/2026 19:03:11] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:03:14,338  INFO  127.0.0.1 - - [27/Apr/2026 19:03:14] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-27 19:03:14,819  INFO  MediaPipe loaded for face detection
+2026-04-27 19:03:14,893  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-27 19:03:15,385  INFO    Checkpoint epoch : 11
+2026-04-27 19:03:15,385  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-27 19:03:15,385  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-27 19:03:15,928  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-27 19:03:15,932  INFO  TriGuardInference ready on cpu
+2026-04-27 19:03:15,932  INFO  Model loaded successfully.
+2026-04-27 19:03:17,337  INFO  127.0.0.1 - - [27/Apr/2026 19:03:17] "GET /health HTTP/1.1" 200 -
+2026-04-27 19:03:44,388  INFO  127.0.0.1 - - [27/Apr/2026 19:03:44] "GET / HTTP/1.1" 200 -
+2026-04-27 19:03:44,437  INFO  127.0.0.1 - - [27/Apr/2026 19:03:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-27 19:03:44,442  INFO  127.0.0.1 - - [27/Apr/2026 19:03:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-27 19:03:44,447  INFO  127.0.0.1 - - [27/Apr/2026 19:03:44] "[36mGET /static/images/hacker.png HTTP/1.1[0m" 304 -
+2026-04-27 19:03:44,734  INFO  127.0.0.1 - - [27/Apr/2026 19:03:44] "GET /health HTTP/1.1" 200 -
+2026-04-27 19:03:48,922  INFO  127.0.0.1 - - [27/Apr/2026 19:03:48] "GET / HTTP/1.1" 200 -
+2026-04-27 19:03:48,991  INFO  127.0.0.1 - - [27/Apr/2026 19:03:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-27 19:03:48,995  INFO  127.0.0.1 - - [27/Apr/2026 19:03:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-27 19:03:49,002  INFO  127.0.0.1 - - [27/Apr/2026 19:03:49] "[36mGET /static/images/hacker.png HTTP/1.1[0m" 304 -
+2026-04-27 19:03:49,018  INFO  127.0.0.1 - - [27/Apr/2026 19:03:49] "GET /health HTTP/1.1" 200 -
+2026-04-27 19:03:50,366  INFO  127.0.0.1 - - [27/Apr/2026 19:03:50] "GET / HTTP/1.1" 200 -
+2026-04-27 19:03:50,436  INFO  127.0.0.1 - - [27/Apr/2026 19:03:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-27 19:03:50,440  INFO  127.0.0.1 - - [27/Apr/2026 19:03:50] "[36mGET /static/images/hacker.png HTTP/1.1[0m" 304 -
+2026-04-27 19:03:50,445  INFO  127.0.0.1 - - [27/Apr/2026 19:03:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-27 19:03:50,456  INFO  127.0.0.1 - - [27/Apr/2026 19:03:50] "GET /health HTTP/1.1" 200 -
+2026-04-27 19:03:59,969  INFO  127.0.0.1 - - [27/Apr/2026 19:03:59] "GET / HTTP/1.1" 200 -
+2026-04-27 19:04:00,034  INFO  127.0.0.1 - - [27/Apr/2026 19:04:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-27 19:04:00,037  INFO  127.0.0.1 - - [27/Apr/2026 19:04:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-27 19:04:00,043  INFO  127.0.0.1 - - [27/Apr/2026 19:04:00] "[36mGET /static/images/hacker.png HTTP/1.1[0m" 304 -
+2026-04-27 19:04:00,159  INFO  127.0.0.1 - - [27/Apr/2026 19:04:00] "GET /health HTTP/1.1" 200 -
+2026-04-27 19:04:28,499  INFO  Single predict: 28_16__podium_speech_happy__ZA8XJIE9.mp4 → output\uploads\57a69245_28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-27 19:04:28,501  INFO  Preprocessing: 57a69245_28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-27 19:04:29,306  INFO    Video has 951 frames, reading up to 150
+2026-04-27 19:04:33,381  INFO    Using 150 frames
+2026-04-27 19:04:35,673  INFO    Face detections: 30/30 attempts
+2026-04-27 19:04:36,801  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:04:39,076  INFO    → FAKE (fake_prob=0.9792, 10.6s)
+2026-04-27 19:04:39,116  INFO  Result: FAKE (fake=0.9792)
+2026-04-27 19:04:39,132  INFO  127.0.0.1 - - [27/Apr/2026 19:04:39] "POST /predict HTTP/1.1" 200 -
+2026-04-27 19:05:57,874  INFO  Batch job a59c33122e79465dae2903fb07b2a674: 9 videos queued
+2026-04-27 19:05:57,879  INFO  Batch worker started: a59c33122e79465dae2903fb07b2a674
+2026-04-27 19:05:57,881  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__walking_down_street_outside_angry__U757192N.mp4
+2026-04-27 19:05:57,884  INFO  Preprocessing: 7d7be95d_28_16__walking_down_street_outside_angry__U757192N.mp4
+2026-04-27 19:05:57,917  INFO  127.0.0.1 - - [27/Apr/2026 19:05:57] "POST /batch/start HTTP/1.1" 200 -
+2026-04-27 19:05:57,967  INFO    Video has 1157 frames, reading up to 150
+2026-04-27 19:05:59,953  INFO  127.0.0.1 - - [27/Apr/2026 19:05:59] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:01,958  INFO  127.0.0.1 - - [27/Apr/2026 19:06:01] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:02,219  INFO    Using 150 frames
+2026-04-27 19:06:03,968  INFO  127.0.0.1 - - [27/Apr/2026 19:06:03] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:04,729  INFO    Face detections: 30/30 attempts
+2026-04-27 19:06:05,587  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:06:06,033  INFO  127.0.0.1 - - [27/Apr/2026 19:06:06] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:07,566  INFO    → FAKE (fake_prob=0.9740, 9.7s)
+2026-04-27 19:06:07,576  INFO    [a59c33122e79465dae2903fb07b2a674] Done 1/9
+2026-04-27 19:06:07,577  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-27 19:06:07,580  INFO  Preprocessing: e8945bd6_28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-27 19:06:07,689  INFO    Video has 1180 frames, reading up to 150
+2026-04-27 19:06:07,949  INFO  127.0.0.1 - - [27/Apr/2026 19:06:07] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:09,958  INFO  127.0.0.1 - - [27/Apr/2026 19:06:09] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:11,791  INFO    Using 150 frames
+2026-04-27 19:06:11,955  INFO  127.0.0.1 - - [27/Apr/2026 19:06:11] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:13,951  INFO  127.0.0.1 - - [27/Apr/2026 19:06:13] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:14,183  INFO    Face detections: 30/30 attempts
+2026-04-27 19:06:15,009  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:06:15,948  INFO  127.0.0.1 - - [27/Apr/2026 19:06:15] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:16,842  INFO    → FAKE (fake_prob=0.9809, 9.3s)
+2026-04-27 19:06:16,850  INFO    [a59c33122e79465dae2903fb07b2a674] Done 2/9
+2026-04-27 19:06:16,851  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__walking_outside_cafe_disgusted__NAZP864W.mp4
+2026-04-27 19:06:16,853  INFO  Preprocessing: 0f173a59_28_16__walking_outside_cafe_disgusted__NAZP864W.mp4
+2026-04-27 19:06:16,953  INFO    Video has 373 frames, reading up to 150
+2026-04-27 19:06:17,943  INFO  127.0.0.1 - - [27/Apr/2026 19:06:17] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:19,959  INFO  127.0.0.1 - - [27/Apr/2026 19:06:19] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:20,849  INFO    Using 150 frames
+2026-04-27 19:06:21,954  INFO  127.0.0.1 - - [27/Apr/2026 19:06:21] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:22,215  INFO    Face detections: 29/30 attempts
+2026-04-27 19:06:23,067  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:06:23,969  INFO  127.0.0.1 - - [27/Apr/2026 19:06:23] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:24,695  INFO    → FAKE (fake_prob=0.9639, 7.8s)
+2026-04-27 19:06:24,700  INFO    [a59c33122e79465dae2903fb07b2a674] Done 3/9
+2026-04-27 19:06:24,701  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__kitchen_still__U757192N.mp4
+2026-04-27 19:06:24,703  INFO  Preprocessing: febf01b6_28_16__kitchen_still__U757192N.mp4
+2026-04-27 19:06:24,791  INFO    Video has 780 frames, reading up to 150
+2026-04-27 19:06:25,955  INFO  127.0.0.1 - - [27/Apr/2026 19:06:25] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:27,944  INFO  127.0.0.1 - - [27/Apr/2026 19:06:27] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:28,231  INFO    Using 150 frames
+2026-04-27 19:06:28,616  INFO    Face detections: 30/30 attempts
+2026-04-27 19:06:29,562  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:06:29,953  INFO  127.0.0.1 - - [27/Apr/2026 19:06:29] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:31,165  INFO    → FAKE (fake_prob=0.9807, 6.5s)
+2026-04-27 19:06:31,170  INFO    [a59c33122e79465dae2903fb07b2a674] Done 4/9
+2026-04-27 19:06:31,171  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__podium_speech_happy__6DWLCU6T.mp4
+2026-04-27 19:06:31,171  INFO  Preprocessing: c873a01c_28_16__podium_speech_happy__6DWLCU6T.mp4
+2026-04-27 19:06:31,244  INFO    Video has 951 frames, reading up to 150
+2026-04-27 19:06:31,958  INFO  127.0.0.1 - - [27/Apr/2026 19:06:31] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:33,960  INFO  127.0.0.1 - - [27/Apr/2026 19:06:33] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:34,824  INFO    Using 150 frames
+2026-04-27 19:06:35,953  INFO  127.0.0.1 - - [27/Apr/2026 19:06:35] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:36,030  INFO    Face detections: 30/30 attempts
+2026-04-27 19:06:36,883  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:06:37,952  INFO  127.0.0.1 - - [27/Apr/2026 19:06:37] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:38,253  INFO    → FAKE (fake_prob=0.9785, 7.1s)
+2026-04-27 19:06:38,259  INFO    [a59c33122e79465dae2903fb07b2a674] Done 5/9
+2026-04-27 19:06:38,259  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-27 19:06:38,262  INFO  Preprocessing: 5637276e_28_16__podium_speech_happy__ZA8XJIE9.mp4
+2026-04-27 19:06:38,320  INFO    Video has 951 frames, reading up to 150
+2026-04-27 19:06:39,946  INFO  127.0.0.1 - - [27/Apr/2026 19:06:39] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:41,949  INFO  127.0.0.1 - - [27/Apr/2026 19:06:41] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:42,212  INFO    Using 150 frames
+2026-04-27 19:06:43,408  INFO    Face detections: 30/30 attempts
+2026-04-27 19:06:43,959  INFO  127.0.0.1 - - [27/Apr/2026 19:06:43] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:44,417  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:06:45,965  INFO  127.0.0.1 - - [27/Apr/2026 19:06:45] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:46,208  INFO    → FAKE (fake_prob=0.9792, 7.9s)
+2026-04-27 19:06:46,211  INFO    [a59c33122e79465dae2903fb07b2a674] Done 6/9
+2026-04-27 19:06:46,212  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__secret_conversation__R1QD0XDQ.mp4
+2026-04-27 19:06:46,212  INFO  Preprocessing: e19fa9a3_28_16__secret_conversation__R1QD0XDQ.mp4
+2026-04-27 19:06:46,309  INFO    Video has 585 frames, reading up to 150
+2026-04-27 19:06:47,965  INFO  127.0.0.1 - - [27/Apr/2026 19:06:47] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:49,979  INFO  127.0.0.1 - - [27/Apr/2026 19:06:49] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:51,380  INFO    Using 150 frames
+2026-04-27 19:06:51,960  INFO  127.0.0.1 - - [27/Apr/2026 19:06:51] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:52,287  INFO    Face detections: 30/30 attempts
+2026-04-27 19:06:53,323  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:06:53,970  INFO  127.0.0.1 - - [27/Apr/2026 19:06:53] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:55,160  INFO    → FAKE (fake_prob=0.9788, 8.9s)
+2026-04-27 19:06:55,169  INFO    [a59c33122e79465dae2903fb07b2a674] Done 7/9
+2026-04-27 19:06:55,172  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__secret_conversation__X5FNCYON.mp4
+2026-04-27 19:06:55,173  INFO  Preprocessing: 70da5637_28_16__secret_conversation__X5FNCYON.mp4
+2026-04-27 19:06:55,269  INFO    Video has 43 frames, reading up to 150
+2026-04-27 19:06:55,969  INFO  127.0.0.1 - - [27/Apr/2026 19:06:55] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:57,232  INFO    Using 150 frames
+2026-04-27 19:06:57,957  INFO  127.0.0.1 - - [27/Apr/2026 19:06:57] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:06:58,968  INFO    Face detections: 30/30 attempts
+2026-04-27 19:06:59,961  INFO  127.0.0.1 - - [27/Apr/2026 19:06:59] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:01,760  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:07:02,553  INFO  127.0.0.1 - - [27/Apr/2026 19:07:02] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:03,966  INFO  127.0.0.1 - - [27/Apr/2026 19:07:03] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:05,959  INFO  127.0.0.1 - - [27/Apr/2026 19:07:05] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:06,177  INFO    → FAKE (fake_prob=0.9800, 11.0s)
+2026-04-27 19:07:06,187  INFO    [a59c33122e79465dae2903fb07b2a674] Done 8/9
+2026-04-27 19:07:06,189  INFO    [a59c33122e79465dae2903fb07b2a674] Processing: 28_16__secret_conversation__ZA8XJIE9.mp4
+2026-04-27 19:07:06,191  INFO  Preprocessing: 9a37169f_28_16__secret_conversation__ZA8XJIE9.mp4
+2026-04-27 19:07:06,414  INFO    Video has 43 frames, reading up to 150
+2026-04-27 19:07:07,965  INFO  127.0.0.1 - - [27/Apr/2026 19:07:07] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:09,686  INFO    Using 150 frames
+2026-04-27 19:07:09,949  INFO  127.0.0.1 - - [27/Apr/2026 19:07:09] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:11,956  INFO  127.0.0.1 - - [27/Apr/2026 19:07:11] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:12,185  INFO    Face detections: 30/30 attempts
+2026-04-27 19:07:12,748  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:07:13,964  INFO  127.0.0.1 - - [27/Apr/2026 19:07:13] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:07:15,291  INFO    → FAKE (fake_prob=0.9802, 9.1s)
+2026-04-27 19:07:15,294  INFO    [a59c33122e79465dae2903fb07b2a674] Done 9/9
+2026-04-27 19:07:15,295  INFO  Batch job a59c33122e79465dae2903fb07b2a674 complete.
+2026-04-27 19:07:15,955  INFO  127.0.0.1 - - [27/Apr/2026 19:07:15] "GET /batch/status/a59c33122e79465dae2903fb07b2a674 HTTP/1.1" 200 -
+2026-04-27 19:08:13,172  INFO  Single predict: 28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4 → output\uploads\6d13ea2b_28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-27 19:08:13,175  INFO  Preprocessing: 6d13ea2b_28_16__walking_down_street_outside_angry__ZA8XJIE9.mp4
+2026-04-27 19:08:13,280  INFO    Video has 1180 frames, reading up to 150
+2026-04-27 19:08:17,698  INFO    Using 150 frames
+2026-04-27 19:08:20,238  INFO    Face detections: 30/30 attempts
+2026-04-27 19:08:22,690  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:08:26,721  INFO    → FAKE (fake_prob=0.9809, 13.5s)
+2026-04-27 19:08:26,725  INFO  Result: FAKE (fake=0.9809)
+2026-04-27 19:08:26,752  INFO  127.0.0.1 - - [27/Apr/2026 19:08:26] "POST /predict HTTP/1.1" 200 -
+2026-04-27 19:08:44,932  INFO  Single predict: 28__outside_talking_pan_laughing.mp4 → output\uploads\f2d33924_28__outside_talking_pan_laughing.mp4
+2026-04-27 19:08:44,934  INFO  Preprocessing: f2d33924_28__outside_talking_pan_laughing.mp4
+2026-04-27 19:08:45,014  INFO    Video has 703 frames, reading up to 150
+2026-04-27 19:08:48,646  INFO    Using 150 frames
+2026-04-27 19:08:49,863  INFO    Face detections: 25/30 attempts
+2026-04-27 19:08:50,453  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:08:51,665  INFO    → REAL (fake_prob=0.0255, 6.7s)
+2026-04-27 19:08:51,667  INFO  Result: REAL (fake=0.0255)
+2026-04-27 19:08:51,674  INFO  127.0.0.1 - - [27/Apr/2026 19:08:51] "POST /predict HTTP/1.1" 200 -
+2026-04-27 19:09:33,936  INFO  Single predict: Video_CV.mp4 → output\uploads\44fce2ce_Video_CV.mp4
+2026-04-27 19:09:33,937  INFO  Preprocessing: 44fce2ce_Video_CV.mp4
+2026-04-27 19:09:34,085  INFO    Video has 2870 frames, reading up to 150
+2026-04-27 19:09:38,058  INFO    Using 150 frames
+2026-04-27 19:09:38,541  INFO    Face detections: 30/30 attempts
+2026-04-27 19:09:39,509  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-27 19:09:41,300  INFO    → REAL (fake_prob=0.0240, 7.4s)
+2026-04-27 19:09:41,302  INFO  Result: REAL (fake=0.0240)
+2026-04-27 19:09:41,422  INFO  127.0.0.1 - - [27/Apr/2026 19:09:41] "POST /predict HTTP/1.1" 200 -
+2026-04-27 19:10:00,710  INFO  127.0.0.1 - - [27/Apr/2026 19:10:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-28 15:17:18,633  INFO  Loading TriGuard model …
+2026-04-28 15:17:18,639  INFO  ============================================================
+2026-04-28 15:17:18,641  INFO    TriGuard-DF Flask Server
+2026-04-28 15:17:18,641  INFO    http://127.0.0.1:5000
+2026-04-28 15:17:18,642  INFO  ============================================================
+2026-04-28 15:17:18,757  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.35.57.115:5000
+2026-04-28 15:17:18,758  INFO  [33mPress CTRL+C to quit[0m
+2026-04-28 15:17:23,139  INFO  127.0.0.1 - - [28/Apr/2026 15:17:23] "GET / HTTP/1.1" 200 -
+2026-04-28 15:17:23,763  INFO  127.0.0.1 - - [28/Apr/2026 15:17:23] "GET /static/images/hacker.png HTTP/1.1" 200 -
+2026-04-28 15:17:23,780  INFO  127.0.0.1 - - [28/Apr/2026 15:17:23] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-04-28 15:17:23,825  INFO  127.0.0.1 - - [28/Apr/2026 15:17:23] "GET /static/js/main.js HTTP/1.1" 200 -
+2026-04-28 15:17:23,998  INFO  127.0.0.1 - - [28/Apr/2026 15:17:23] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:24,553  INFO  127.0.0.1 - - [28/Apr/2026 15:17:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-28 15:17:26,017  INFO  127.0.0.1 - - [28/Apr/2026 15:17:26] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:28,034  INFO  127.0.0.1 - - [28/Apr/2026 15:17:28] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:30,052  INFO  127.0.0.1 - - [28/Apr/2026 15:17:30] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:32,071  INFO  127.0.0.1 - - [28/Apr/2026 15:17:32] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:34,086  INFO  127.0.0.1 - - [28/Apr/2026 15:17:34] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:36,119  INFO  127.0.0.1 - - [28/Apr/2026 15:17:36] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:38,139  INFO  127.0.0.1 - - [28/Apr/2026 15:17:38] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:40,163  INFO  127.0.0.1 - - [28/Apr/2026 15:17:40] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:42,187  INFO  127.0.0.1 - - [28/Apr/2026 15:17:42] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:44,211  INFO  127.0.0.1 - - [28/Apr/2026 15:17:44] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:46,232  INFO  127.0.0.1 - - [28/Apr/2026 15:17:46] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:48,252  INFO  127.0.0.1 - - [28/Apr/2026 15:17:48] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:50,325  INFO  127.0.0.1 - - [28/Apr/2026 15:17:50] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:52,358  INFO  127.0.0.1 - - [28/Apr/2026 15:17:52] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:54,484  INFO  127.0.0.1 - - [28/Apr/2026 15:17:54] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:56,558  INFO  127.0.0.1 - - [28/Apr/2026 15:17:56] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:17:59,172  INFO  127.0.0.1 - - [28/Apr/2026 15:17:59] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:01,198  INFO  127.0.0.1 - - [28/Apr/2026 15:18:01] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:03,272  INFO  127.0.0.1 - - [28/Apr/2026 15:18:03] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:05,337  INFO  127.0.0.1 - - [28/Apr/2026 15:18:05] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:07,402  INFO  127.0.0.1 - - [28/Apr/2026 15:18:07] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:09,595  INFO  127.0.0.1 - - [28/Apr/2026 15:18:09] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:12,328  INFO  127.0.0.1 - - [28/Apr/2026 15:18:12] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:15,184  INFO  127.0.0.1 - - [28/Apr/2026 15:18:15] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-04-28 15:18:16,090  INFO  MediaPipe loaded for face detection
+2026-04-28 15:18:16,170  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-04-28 15:18:16,685  INFO    Checkpoint epoch : 11
+2026-04-28 15:18:16,685  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-04-28 15:18:16,686  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-04-28 15:18:17,207  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-04-28 15:18:17,211  INFO  TriGuardInference ready on cpu
+2026-04-28 15:18:17,212  INFO  Model loaded successfully.
+2026-04-28 15:18:18,164  INFO  127.0.0.1 - - [28/Apr/2026 15:18:18] "GET /health HTTP/1.1" 200 -
+2026-04-28 15:19:30,446  INFO  Single predict: 27_25__walking_down_street_outside_angry__ZTV6TUQ9.mp4 → output\uploads\ba4acc54_27_25__walking_down_street_outside_angry__ZTV6TUQ9.mp4
+2026-04-28 15:19:30,447  INFO  Preprocessing: ba4acc54_27_25__walking_down_street_outside_angry__ZTV6TUQ9.mp4
+2026-04-28 15:19:31,355  INFO    Video has 426 frames, reading up to 150
+2026-04-28 15:19:36,570  INFO    Using 150 frames
+2026-04-28 15:19:43,347  INFO    Face detections: 30/30 attempts
+2026-04-28 15:19:45,924  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:19:49,911  INFO    → FAKE (fake_prob=0.9772, 19.5s)
+2026-04-28 15:19:49,923  INFO  Result: FAKE (fake=0.9772)
+2026-04-28 15:19:49,933  INFO  127.0.0.1 - - [28/Apr/2026 15:19:49] "POST /predict HTTP/1.1" 200 -
+2026-04-28 15:20:19,863  INFO  Single predict: 23__walking_outside_cafe_disgusted.mp4 → output\uploads\3cd4ebe0_23__walking_outside_cafe_disgusted.mp4
+2026-04-28 15:20:19,867  INFO  Preprocessing: 3cd4ebe0_23__walking_outside_cafe_disgusted.mp4
+2026-04-28 15:20:20,005  INFO    Video has 608 frames, reading up to 150
+2026-04-28 15:20:23,660  INFO    Using 150 frames
+2026-04-28 15:20:25,566  INFO    Face detections: 19/30 attempts
+2026-04-28 15:20:26,762  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:20:28,322  INFO    → REAL (fake_prob=0.0273, 8.5s)
+2026-04-28 15:20:28,323  INFO  Result: REAL (fake=0.0273)
+2026-04-28 15:20:28,330  INFO  127.0.0.1 - - [28/Apr/2026 15:20:28] "POST /predict HTTP/1.1" 200 -
+2026-04-28 15:24:15,658  INFO  Batch job cdc2f2424736443fab681d66cee96a0b: 6 videos queued
+2026-04-28 15:24:15,667  INFO  Batch worker started: cdc2f2424736443fab681d66cee96a0b
+2026-04-28 15:24:15,668  INFO    [cdc2f2424736443fab681d66cee96a0b] Processing: arabic_fake_Fake_1030.mp4
+2026-04-28 15:24:15,669  INFO  Preprocessing: 61a4f05b_arabic_fake_Fake_1030.mp4
+2026-04-28 15:24:15,689  INFO  127.0.0.1 - - [28/Apr/2026 15:24:15] "POST /batch/start HTTP/1.1" 200 -
+2026-04-28 15:24:15,787  INFO    Video has 773 frames, reading up to 150
+2026-04-28 15:24:16,341  INFO    Using 150 frames
+2026-04-28 15:24:17,107  INFO    Face detections: 30/30 attempts
+2026-04-28 15:24:17,735  INFO  127.0.0.1 - - [28/Apr/2026 15:24:17] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:18,591  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:24:19,733  INFO  127.0.0.1 - - [28/Apr/2026 15:24:19] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:20,883  INFO    → REAL (fake_prob=0.0526, 5.2s)
+2026-04-28 15:24:20,893  INFO    [cdc2f2424736443fab681d66cee96a0b] Done 1/6
+2026-04-28 15:24:20,895  INFO    [cdc2f2424736443fab681d66cee96a0b] Processing: arabic_fake_Fake_100.mp4
+2026-04-28 15:24:20,899  INFO  Preprocessing: 3996b0d0_arabic_fake_Fake_100.mp4
+2026-04-28 15:24:21,055  INFO    Video has 299 frames, reading up to 150
+2026-04-28 15:24:21,730  INFO  127.0.0.1 - - [28/Apr/2026 15:24:21] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:23,428  INFO    Using 150 frames
+2026-04-28 15:24:23,726  INFO  127.0.0.1 - - [28/Apr/2026 15:24:23] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:24,286  INFO    Face detections: 30/30 attempts
+2026-04-28 15:24:25,689  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:24:25,912  INFO  127.0.0.1 - - [28/Apr/2026 15:24:25] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:27,728  INFO  127.0.0.1 - - [28/Apr/2026 15:24:27] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:27,913  INFO    → FAKE (fake_prob=0.9592, 7.0s)
+2026-04-28 15:24:27,923  INFO    [cdc2f2424736443fab681d66cee96a0b] Done 2/6
+2026-04-28 15:24:27,925  INFO    [cdc2f2424736443fab681d66cee96a0b] Processing: arabic_fake_Fake_1001.mp4
+2026-04-28 15:24:27,928  INFO  Preprocessing: 84891443_arabic_fake_Fake_1001.mp4
+2026-04-28 15:24:28,108  INFO    Video has 476 frames, reading up to 150
+2026-04-28 15:24:29,721  INFO  127.0.0.1 - - [28/Apr/2026 15:24:29] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:31,730  INFO  127.0.0.1 - - [28/Apr/2026 15:24:31] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:31,746  INFO    Using 150 frames
+2026-04-28 15:24:32,408  INFO    Face detections: 30/30 attempts
+2026-04-28 15:24:33,583  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:24:33,930  INFO  127.0.0.1 - - [28/Apr/2026 15:24:33] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:35,728  INFO  127.0.0.1 - - [28/Apr/2026 15:24:35] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:35,908  INFO    → REAL (fake_prob=0.0259, 8.0s)
+2026-04-28 15:24:35,914  INFO    [cdc2f2424736443fab681d66cee96a0b] Done 3/6
+2026-04-28 15:24:35,916  INFO    [cdc2f2424736443fab681d66cee96a0b] Processing: arabic_real_Real_100.mp4
+2026-04-28 15:24:35,919  INFO  Preprocessing: 6db1b565_arabic_real_Real_100.mp4
+2026-04-28 15:24:36,015  INFO    Video has 180 frames, reading up to 150
+2026-04-28 15:24:37,731  INFO  127.0.0.1 - - [28/Apr/2026 15:24:37] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:38,023  INFO    Using 150 frames
+2026-04-28 15:24:38,942  INFO    Face detections: 30/30 attempts
+2026-04-28 15:24:39,727  INFO  127.0.0.1 - - [28/Apr/2026 15:24:39] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:40,093  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:24:41,721  INFO  127.0.0.1 - - [28/Apr/2026 15:24:41] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:41,982  INFO    → REAL (fake_prob=0.0412, 6.1s)
+2026-04-28 15:24:41,988  INFO    [cdc2f2424736443fab681d66cee96a0b] Done 4/6
+2026-04-28 15:24:41,989  INFO    [cdc2f2424736443fab681d66cee96a0b] Processing: arabic_real_Real_1051.mp4
+2026-04-28 15:24:41,993  INFO  Preprocessing: ecaef0c2_arabic_real_Real_1051.mp4
+2026-04-28 15:24:42,075  INFO    Video has 1275 frames, reading up to 150
+2026-04-28 15:24:43,491  INFO    Using 150 frames
+2026-04-28 15:24:43,719  INFO  127.0.0.1 - - [28/Apr/2026 15:24:43] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:45,733  INFO  127.0.0.1 - - [28/Apr/2026 15:24:45] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:47,718  INFO  127.0.0.1 - - [28/Apr/2026 15:24:47] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:49,732  INFO  127.0.0.1 - - [28/Apr/2026 15:24:49] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:51,248  INFO    Face detections: 30/30 attempts
+2026-04-28 15:24:51,717  INFO  127.0.0.1 - - [28/Apr/2026 15:24:51] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:51,901  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:24:53,745  INFO  127.0.0.1 - - [28/Apr/2026 15:24:53] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:54,415  INFO    → FAKE (fake_prob=0.9750, 12.4s)
+2026-04-28 15:24:54,422  INFO    [cdc2f2424736443fab681d66cee96a0b] Done 5/6
+2026-04-28 15:24:54,424  INFO    [cdc2f2424736443fab681d66cee96a0b] Processing: arabic_real_Real_1018.mp4
+2026-04-28 15:24:54,429  INFO  Preprocessing: e40aaf1f_arabic_real_Real_1018.mp4
+2026-04-28 15:24:54,544  INFO    Video has 500 frames, reading up to 150
+2026-04-28 15:24:55,727  INFO  127.0.0.1 - - [28/Apr/2026 15:24:55] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:57,551  INFO    Using 150 frames
+2026-04-28 15:24:57,732  INFO  127.0.0.1 - - [28/Apr/2026 15:24:57] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:24:58,158  INFO    Face detections: 30/30 attempts
+2026-04-28 15:24:59,729  INFO  127.0.0.1 - - [28/Apr/2026 15:24:59] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:25:00,036  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:25:01,731  INFO  127.0.0.1 - - [28/Apr/2026 15:25:01] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:25:02,175  INFO    → REAL (fake_prob=0.0298, 7.7s)
+2026-04-28 15:25:02,180  INFO    [cdc2f2424736443fab681d66cee96a0b] Done 6/6
+2026-04-28 15:25:02,181  INFO  Batch job cdc2f2424736443fab681d66cee96a0b complete.
+2026-04-28 15:25:03,726  INFO  127.0.0.1 - - [28/Apr/2026 15:25:03] "GET /batch/status/cdc2f2424736443fab681d66cee96a0b HTTP/1.1" 200 -
+2026-04-28 15:25:10,617  INFO  Batch job 29ce1f98d2b64e668dc98616efb459fd: 6 videos queued
+2026-04-28 15:25:10,622  INFO  Batch worker started: 29ce1f98d2b64e668dc98616efb459fd
+2026-04-28 15:25:10,624  INFO    [29ce1f98d2b64e668dc98616efb459fd] Processing: arabic_fake_Fake_1030.mp4
+2026-04-28 15:25:10,626  INFO  Preprocessing: 54205a3d_arabic_fake_Fake_1030.mp4
+2026-04-28 15:25:10,640  INFO  127.0.0.1 - - [28/Apr/2026 15:25:10] "POST /batch/start HTTP/1.1" 200 -
+2026-04-28 15:25:10,696  INFO    Video has 773 frames, reading up to 150
+2026-04-28 15:25:11,131  INFO    Using 150 frames
+2026-04-28 15:25:11,877  INFO    Face detections: 30/30 attempts
+2026-04-28 15:25:12,688  INFO  127.0.0.1 - - [28/Apr/2026 15:25:12] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:13,172  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:25:14,695  INFO  127.0.0.1 - - [28/Apr/2026 15:25:14] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:15,096  INFO    → REAL (fake_prob=0.0526, 4.5s)
+2026-04-28 15:25:15,110  INFO    [29ce1f98d2b64e668dc98616efb459fd] Done 1/6
+2026-04-28 15:25:15,113  INFO    [29ce1f98d2b64e668dc98616efb459fd] Processing: arabic_fake_Fake_100.mp4
+2026-04-28 15:25:15,121  INFO  Preprocessing: e69814c8_arabic_fake_Fake_100.mp4
+2026-04-28 15:25:15,258  INFO    Video has 299 frames, reading up to 150
+2026-04-28 15:25:16,687  INFO  127.0.0.1 - - [28/Apr/2026 15:25:16] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:17,109  INFO    Using 150 frames
+2026-04-28 15:25:17,882  INFO    Face detections: 30/30 attempts
+2026-04-28 15:25:18,685  INFO  127.0.0.1 - - [28/Apr/2026 15:25:18] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:18,988  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:25:20,682  INFO  127.0.0.1 - - [28/Apr/2026 15:25:20] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:20,854  INFO    → FAKE (fake_prob=0.9592, 5.7s)
+2026-04-28 15:25:20,859  INFO    [29ce1f98d2b64e668dc98616efb459fd] Done 2/6
+2026-04-28 15:25:20,862  INFO    [29ce1f98d2b64e668dc98616efb459fd] Processing: arabic_fake_Fake_1001.mp4
+2026-04-28 15:25:20,866  INFO  Preprocessing: 65092b46_arabic_fake_Fake_1001.mp4
+2026-04-28 15:25:20,987  INFO    Video has 476 frames, reading up to 150
+2026-04-28 15:25:22,687  INFO  127.0.0.1 - - [28/Apr/2026 15:25:22] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:24,211  INFO    Using 150 frames
+2026-04-28 15:25:24,683  INFO  127.0.0.1 - - [28/Apr/2026 15:25:24] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:24,881  INFO    Face detections: 30/30 attempts
+2026-04-28 15:25:26,380  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:25:26,695  INFO  127.0.0.1 - - [28/Apr/2026 15:25:26] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:28,253  INFO    → REAL (fake_prob=0.0259, 7.4s)
+2026-04-28 15:25:28,272  INFO    [29ce1f98d2b64e668dc98616efb459fd] Done 3/6
+2026-04-28 15:25:28,279  INFO    [29ce1f98d2b64e668dc98616efb459fd] Processing: arabic_real_Real_100.mp4
+2026-04-28 15:25:28,294  INFO  Preprocessing: b5bf9aa3_arabic_real_Real_100.mp4
+2026-04-28 15:25:28,471  INFO    Video has 180 frames, reading up to 150
+2026-04-28 15:25:28,727  INFO  127.0.0.1 - - [28/Apr/2026 15:25:28] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:30,681  INFO  127.0.0.1 - - [28/Apr/2026 15:25:30] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:30,941  INFO    Using 150 frames
+2026-04-28 15:25:31,640  INFO    Face detections: 30/30 attempts
+2026-04-28 15:25:32,632  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:25:32,874  INFO  127.0.0.1 - - [28/Apr/2026 15:25:32] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:34,303  INFO    → REAL (fake_prob=0.0412, 6.0s)
+2026-04-28 15:25:34,309  INFO    [29ce1f98d2b64e668dc98616efb459fd] Done 4/6
+2026-04-28 15:25:34,311  INFO    [29ce1f98d2b64e668dc98616efb459fd] Processing: arabic_real_Real_1051.mp4
+2026-04-28 15:25:34,313  INFO  Preprocessing: 63a3d924_arabic_real_Real_1051.mp4
+2026-04-28 15:25:34,400  INFO    Video has 1275 frames, reading up to 150
+2026-04-28 15:25:34,679  INFO  127.0.0.1 - - [28/Apr/2026 15:25:34] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:35,523  INFO    Using 150 frames
+2026-04-28 15:25:36,695  INFO  127.0.0.1 - - [28/Apr/2026 15:25:36] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:38,697  INFO  127.0.0.1 - - [28/Apr/2026 15:25:38] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:40,685  INFO  127.0.0.1 - - [28/Apr/2026 15:25:40] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:42,686  INFO  127.0.0.1 - - [28/Apr/2026 15:25:42] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:42,690  INFO    Face detections: 30/30 attempts
+2026-04-28 15:25:43,222  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:25:44,645  INFO    → FAKE (fake_prob=0.9750, 10.3s)
+2026-04-28 15:25:44,651  INFO    [29ce1f98d2b64e668dc98616efb459fd] Done 5/6
+2026-04-28 15:25:44,653  INFO    [29ce1f98d2b64e668dc98616efb459fd] Processing: arabic_real_Real_1018.mp4
+2026-04-28 15:25:44,656  INFO  Preprocessing: de4073ca_arabic_real_Real_1018.mp4
+2026-04-28 15:25:44,682  INFO  127.0.0.1 - - [28/Apr/2026 15:25:44] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:44,748  INFO    Video has 500 frames, reading up to 150
+2026-04-28 15:25:46,681  INFO  127.0.0.1 - - [28/Apr/2026 15:25:46] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:47,810  INFO    Using 150 frames
+2026-04-28 15:25:48,390  INFO    Face detections: 30/30 attempts
+2026-04-28 15:25:48,689  INFO  127.0.0.1 - - [28/Apr/2026 15:25:48] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:50,166  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:25:50,686  INFO  127.0.0.1 - - [28/Apr/2026 15:25:50] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:25:52,016  INFO    → REAL (fake_prob=0.0298, 7.4s)
+2026-04-28 15:25:52,023  INFO    [29ce1f98d2b64e668dc98616efb459fd] Done 6/6
+2026-04-28 15:25:52,024  INFO  Batch job 29ce1f98d2b64e668dc98616efb459fd complete.
+2026-04-28 15:25:52,680  INFO  127.0.0.1 - - [28/Apr/2026 15:25:52] "GET /batch/status/29ce1f98d2b64e668dc98616efb459fd HTTP/1.1" 200 -
+2026-04-28 15:28:04,335  INFO  Single predict: arabic_fake_Fake_1054.mp4 → output\uploads\1f641cb3_arabic_fake_Fake_1054.mp4
+2026-04-28 15:28:04,336  INFO  Preprocessing: 1f641cb3_arabic_fake_Fake_1054.mp4
+2026-04-28 15:28:04,388  INFO    Video has 249 frames, reading up to 150
+2026-04-28 15:28:06,080  INFO    Using 150 frames
+2026-04-28 15:28:06,554  INFO    Face detections: 30/30 attempts
+2026-04-28 15:28:07,259  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:28:08,867  INFO    → FAKE (fake_prob=0.8415, 4.5s)
+2026-04-28 15:28:08,869  INFO  Result: FAKE (fake=0.8415)
+2026-04-28 15:28:08,880  INFO  127.0.0.1 - - [28/Apr/2026 15:28:08] "POST /predict HTTP/1.1" 200 -
+2026-04-28 15:29:22,633  INFO  127.0.0.1 - - [28/Apr/2026 15:29:22] "GET / HTTP/1.1" 200 -
+2026-04-28 15:29:22,681  INFO  127.0.0.1 - - [28/Apr/2026 15:29:22] "[36mGET /static/images/hacker.png HTTP/1.1[0m" 304 -
+2026-04-28 15:29:22,687  INFO  127.0.0.1 - - [28/Apr/2026 15:29:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-28 15:29:22,698  INFO  127.0.0.1 - - [28/Apr/2026 15:29:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-28 15:29:22,717  INFO  127.0.0.1 - - [28/Apr/2026 15:29:22] "GET /health HTTP/1.1" 200 -
+2026-04-28 15:29:36,129  INFO  Batch job ef046cbd089f433a9fe0198030eab0af: 6 videos queued
+2026-04-28 15:29:36,132  INFO  Batch worker started: ef046cbd089f433a9fe0198030eab0af
+2026-04-28 15:29:36,133  INFO    [ef046cbd089f433a9fe0198030eab0af] Processing: arabic_fake_Fake_1063.mp4
+2026-04-28 15:29:36,135  INFO  Preprocessing: d2fd8f8a_arabic_fake_Fake_1063.mp4
+2026-04-28 15:29:36,146  INFO  127.0.0.1 - - [28/Apr/2026 15:29:36] "POST /batch/start HTTP/1.1" 200 -
+2026-04-28 15:29:36,193  INFO    Video has 249 frames, reading up to 150
+2026-04-28 15:29:38,177  INFO  127.0.0.1 - - [28/Apr/2026 15:29:38] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:38,466  INFO    Using 150 frames
+2026-04-28 15:29:38,990  INFO    Face detections: 30/30 attempts
+2026-04-28 15:29:40,057  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:29:40,274  INFO  127.0.0.1 - - [28/Apr/2026 15:29:40] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:41,670  INFO    → REAL (fake_prob=0.0420, 5.5s)
+2026-04-28 15:29:41,674  INFO    [ef046cbd089f433a9fe0198030eab0af] Done 1/6
+2026-04-28 15:29:41,674  INFO    [ef046cbd089f433a9fe0198030eab0af] Processing: arabic_fake_Fake_1054.mp4
+2026-04-28 15:29:41,676  INFO  Preprocessing: 12449869_arabic_fake_Fake_1054.mp4
+2026-04-28 15:29:41,749  INFO    Video has 249 frames, reading up to 150
+2026-04-28 15:29:42,186  INFO  127.0.0.1 - - [28/Apr/2026 15:29:42] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:43,307  INFO    Using 150 frames
+2026-04-28 15:29:43,928  INFO    Face detections: 30/30 attempts
+2026-04-28 15:29:44,192  INFO  127.0.0.1 - - [28/Apr/2026 15:29:44] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:44,802  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:29:46,177  INFO  127.0.0.1 - - [28/Apr/2026 15:29:46] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:46,299  INFO    → FAKE (fake_prob=0.8415, 4.6s)
+2026-04-28 15:29:46,305  INFO    [ef046cbd089f433a9fe0198030eab0af] Done 2/6
+2026-04-28 15:29:46,306  INFO    [ef046cbd089f433a9fe0198030eab0af] Processing: arabic_fake_Fake_100.mp4
+2026-04-28 15:29:46,307  INFO  Preprocessing: 783dfe92_arabic_fake_Fake_100.mp4
+2026-04-28 15:29:46,423  INFO    Video has 299 frames, reading up to 150
+2026-04-28 15:29:48,169  INFO    Using 150 frames
+2026-04-28 15:29:48,176  INFO  127.0.0.1 - - [28/Apr/2026 15:29:48] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:48,703  INFO    Face detections: 30/30 attempts
+2026-04-28 15:29:49,497  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:29:50,184  INFO  127.0.0.1 - - [28/Apr/2026 15:29:50] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:50,987  INFO    → FAKE (fake_prob=0.9592, 4.7s)
+2026-04-28 15:29:50,991  INFO    [ef046cbd089f433a9fe0198030eab0af] Done 3/6
+2026-04-28 15:29:50,992  INFO    [ef046cbd089f433a9fe0198030eab0af] Processing: arabic_real_Real_100.mp4
+2026-04-28 15:29:50,995  INFO  Preprocessing: 32f41cc4_arabic_real_Real_100.mp4
+2026-04-28 15:29:51,069  INFO    Video has 180 frames, reading up to 150
+2026-04-28 15:29:52,180  INFO  127.0.0.1 - - [28/Apr/2026 15:29:52] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:52,843  INFO    Using 150 frames
+2026-04-28 15:29:53,403  INFO    Face detections: 30/30 attempts
+2026-04-28 15:29:54,177  INFO  127.0.0.1 - - [28/Apr/2026 15:29:54] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:54,356  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:29:55,842  INFO    → REAL (fake_prob=0.0412, 4.8s)
+2026-04-28 15:29:55,849  INFO    [ef046cbd089f433a9fe0198030eab0af] Done 4/6
+2026-04-28 15:29:55,850  INFO    [ef046cbd089f433a9fe0198030eab0af] Processing: arabic_real_Real_1051.mp4
+2026-04-28 15:29:55,851  INFO  Preprocessing: 505979d8_arabic_real_Real_1051.mp4
+2026-04-28 15:29:55,939  INFO    Video has 1275 frames, reading up to 150
+2026-04-28 15:29:56,177  INFO  127.0.0.1 - - [28/Apr/2026 15:29:56] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:29:57,012  INFO    Using 150 frames
+2026-04-28 15:29:58,182  INFO  127.0.0.1 - - [28/Apr/2026 15:29:58] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:30:00,171  INFO  127.0.0.1 - - [28/Apr/2026 15:30:00] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:30:02,171  INFO  127.0.0.1 - - [28/Apr/2026 15:30:02] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:30:02,445  INFO    Face detections: 30/30 attempts
+2026-04-28 15:30:02,901  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:30:04,170  INFO  127.0.0.1 - - [28/Apr/2026 15:30:04] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:30:04,245  INFO    → FAKE (fake_prob=0.9750, 8.4s)
+2026-04-28 15:30:04,248  INFO    [ef046cbd089f433a9fe0198030eab0af] Done 5/6
+2026-04-28 15:30:04,249  INFO    [ef046cbd089f433a9fe0198030eab0af] Processing: arabic_real_Real_1018.mp4
+2026-04-28 15:30:04,250  INFO  Preprocessing: 7fae6756_arabic_real_Real_1018.mp4
+2026-04-28 15:30:04,332  INFO    Video has 500 frames, reading up to 150
+2026-04-28 15:30:06,171  INFO  127.0.0.1 - - [28/Apr/2026 15:30:06] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:30:06,879  INFO    Using 150 frames
+2026-04-28 15:30:07,232  INFO    Face detections: 30/30 attempts
+2026-04-28 15:30:08,179  INFO  127.0.0.1 - - [28/Apr/2026 15:30:08] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:30:08,514  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:30:10,017  INFO    → REAL (fake_prob=0.0298, 5.8s)
+2026-04-28 15:30:10,025  INFO    [ef046cbd089f433a9fe0198030eab0af] Done 6/6
+2026-04-28 15:30:10,026  INFO  Batch job ef046cbd089f433a9fe0198030eab0af complete.
+2026-04-28 15:30:10,176  INFO  127.0.0.1 - - [28/Apr/2026 15:30:10] "GET /batch/status/ef046cbd089f433a9fe0198030eab0af HTTP/1.1" 200 -
+2026-04-28 15:30:42,898  INFO  127.0.0.1 - - [28/Apr/2026 15:30:42] "GET / HTTP/1.1" 200 -
+2026-04-28 15:30:42,953  INFO  127.0.0.1 - - [28/Apr/2026 15:30:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-04-28 15:30:42,960  INFO  127.0.0.1 - - [28/Apr/2026 15:30:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-04-28 15:30:42,963  INFO  127.0.0.1 - - [28/Apr/2026 15:30:42] "[36mGET /static/images/hacker.png HTTP/1.1[0m" 304 -
+2026-04-28 15:30:42,984  INFO  127.0.0.1 - - [28/Apr/2026 15:30:42] "GET /health HTTP/1.1" 200 -
+2026-04-28 15:50:17,814  INFO  Single predict: arabic_real_Real_100.mp4 → output\uploads\5a858bcf_arabic_real_Real_100.mp4
+2026-04-28 15:50:17,820  INFO  Preprocessing: 5a858bcf_arabic_real_Real_100.mp4
+2026-04-28 15:50:17,919  INFO    Video has 180 frames, reading up to 150
+2026-04-28 15:50:20,614  INFO    Using 150 frames
+2026-04-28 15:50:21,492  INFO    Face detections: 30/30 attempts
+2026-04-28 15:50:23,134  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:50:25,299  INFO    → REAL (fake_prob=0.0412, 7.5s)
+2026-04-28 15:50:25,301  INFO  Result: REAL (fake=0.0412)
+2026-04-28 15:50:25,315  INFO  127.0.0.1 - - [28/Apr/2026 15:50:25] "POST /predict HTTP/1.1" 200 -
+2026-04-28 15:52:19,622  INFO  Single predict: arabic_fake_Fake_1054.mp4 → output\uploads\4c9e5c64_arabic_fake_Fake_1054.mp4
+2026-04-28 15:52:19,623  INFO  Preprocessing: 4c9e5c64_arabic_fake_Fake_1054.mp4
+2026-04-28 15:52:19,685  INFO    Video has 249 frames, reading up to 150
+2026-04-28 15:52:21,396  INFO    Using 150 frames
+2026-04-28 15:52:21,907  INFO    Face detections: 30/30 attempts
+2026-04-28 15:52:22,837  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:52:24,481  INFO    → FAKE (fake_prob=0.8415, 4.9s)
+2026-04-28 15:52:24,482  INFO  Result: FAKE (fake=0.8415)
+2026-04-28 15:52:24,490  INFO  127.0.0.1 - - [28/Apr/2026 15:52:24] "POST /predict HTTP/1.1" 200 -
+2026-04-28 15:53:18,103  INFO  Batch job 95ce6dafd7d34591bd61a9bf673954de: 4 videos queued
+2026-04-28 15:53:18,106  INFO  Batch worker started: 95ce6dafd7d34591bd61a9bf673954de
+2026-04-28 15:53:18,107  INFO    [95ce6dafd7d34591bd61a9bf673954de] Processing: arabic_fake_Fake_1054.mp4
+2026-04-28 15:53:18,109  INFO  Preprocessing: 8e832b43_arabic_fake_Fake_1054.mp4
+2026-04-28 15:53:18,115  INFO  127.0.0.1 - - [28/Apr/2026 15:53:18] "POST /batch/start HTTP/1.1" 200 -
+2026-04-28 15:53:18,184  INFO    Video has 249 frames, reading up to 150
+2026-04-28 15:53:19,654  INFO    Using 150 frames
+2026-04-28 15:53:20,139  INFO  127.0.0.1 - - [28/Apr/2026 15:53:20] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:20,180  INFO    Face detections: 30/30 attempts
+2026-04-28 15:53:20,749  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:53:21,952  INFO    → FAKE (fake_prob=0.8415, 3.8s)
+2026-04-28 15:53:21,955  INFO    [95ce6dafd7d34591bd61a9bf673954de] Done 1/4
+2026-04-28 15:53:21,956  INFO    [95ce6dafd7d34591bd61a9bf673954de] Processing: arabic_fake_Fake_100.mp4
+2026-04-28 15:53:21,957  INFO  Preprocessing: ba03f1d3_arabic_fake_Fake_100.mp4
+2026-04-28 15:53:22,035  INFO    Video has 299 frames, reading up to 150
+2026-04-28 15:53:22,141  INFO  127.0.0.1 - - [28/Apr/2026 15:53:22] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:23,394  INFO    Using 150 frames
+2026-04-28 15:53:23,966  INFO    Face detections: 30/30 attempts
+2026-04-28 15:53:24,139  INFO  127.0.0.1 - - [28/Apr/2026 15:53:24] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:24,687  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:53:25,878  INFO    → FAKE (fake_prob=0.9592, 3.9s)
+2026-04-28 15:53:25,885  INFO    [95ce6dafd7d34591bd61a9bf673954de] Done 2/4
+2026-04-28 15:53:25,885  INFO    [95ce6dafd7d34591bd61a9bf673954de] Processing: arabic_real_Real_100.mp4
+2026-04-28 15:53:25,887  INFO  Preprocessing: d56530d8_arabic_real_Real_100.mp4
+2026-04-28 15:53:25,953  INFO    Video has 180 frames, reading up to 150
+2026-04-28 15:53:26,138  INFO  127.0.0.1 - - [28/Apr/2026 15:53:26] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:27,668  INFO    Using 150 frames
+2026-04-28 15:53:28,152  INFO  127.0.0.1 - - [28/Apr/2026 15:53:28] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:28,281  INFO    Face detections: 30/30 attempts
+2026-04-28 15:53:29,826  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:53:30,147  INFO  127.0.0.1 - - [28/Apr/2026 15:53:30] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:31,551  INFO    → REAL (fake_prob=0.0412, 5.7s)
+2026-04-28 15:53:31,555  INFO    [95ce6dafd7d34591bd61a9bf673954de] Done 3/4
+2026-04-28 15:53:31,557  INFO    [95ce6dafd7d34591bd61a9bf673954de] Processing: arabic_real_Real_1018.mp4
+2026-04-28 15:53:31,561  INFO  Preprocessing: c1de0cc3_arabic_real_Real_1018.mp4
+2026-04-28 15:53:31,718  INFO    Video has 500 frames, reading up to 150
+2026-04-28 15:53:32,136  INFO  127.0.0.1 - - [28/Apr/2026 15:53:32] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:33,992  INFO    Using 150 frames
+2026-04-28 15:53:34,147  INFO  127.0.0.1 - - [28/Apr/2026 15:53:34] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:34,594  INFO    Face detections: 30/30 attempts
+2026-04-28 15:53:35,840  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-04-28 15:53:36,148  INFO  127.0.0.1 - - [28/Apr/2026 15:53:36] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-04-28 15:53:37,164  INFO    → REAL (fake_prob=0.0298, 5.6s)
+2026-04-28 15:53:37,169  INFO    [95ce6dafd7d34591bd61a9bf673954de] Done 4/4
+2026-04-28 15:53:37,172  INFO  Batch job 95ce6dafd7d34591bd61a9bf673954de complete.
+2026-04-28 15:53:38,133  INFO  127.0.0.1 - - [28/Apr/2026 15:53:38] "GET /batch/status/95ce6dafd7d34591bd61a9bf673954de HTTP/1.1" 200 -
+2026-06-15 21:18:15,696  INFO  Loading TriGuard model …
+2026-06-15 21:18:15,702  INFO  ============================================================
+2026-06-15 21:18:15,703  INFO    TriGuard-DF Flask Server
+2026-06-15 21:18:15,705  INFO    http://127.0.0.1:5000
+2026-06-15 21:18:15,705  INFO  ============================================================
+2026-06-15 21:18:15,788  INFO  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2026-06-15 21:18:15,788  INFO  [33mPress CTRL+C to quit[0m
+2026-06-15 21:18:24,999  INFO  127.0.0.1 - - [15/Jun/2026 21:18:24] "GET / HTTP/1.1" 200 -
+2026-06-15 21:18:25,236  INFO  127.0.0.1 - - [15/Jun/2026 21:18:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-15 21:18:25,239  INFO  127.0.0.1 - - [15/Jun/2026 21:18:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2026-06-15 21:18:25,240  INFO  127.0.0.1 - - [15/Jun/2026 21:18:25] "GET /static/images/hacker.png HTTP/1.1" 200 -
+2026-06-15 21:18:25,461  INFO  127.0.0.1 - - [15/Jun/2026 21:18:25] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:27,476  INFO  127.0.0.1 - - [15/Jun/2026 21:18:27] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:29,492  INFO  127.0.0.1 - - [15/Jun/2026 21:18:29] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:31,697  INFO  127.0.0.1 - - [15/Jun/2026 21:18:31] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:33,774  INFO  127.0.0.1 - - [15/Jun/2026 21:18:33] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:35,810  INFO  127.0.0.1 - - [15/Jun/2026 21:18:35] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:37,913  INFO  127.0.0.1 - - [15/Jun/2026 21:18:37] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:40,044  INFO  127.0.0.1 - - [15/Jun/2026 21:18:40] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:42,133  INFO  127.0.0.1 - - [15/Jun/2026 21:18:42] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:44,204  INFO  127.0.0.1 - - [15/Jun/2026 21:18:44] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:46,251  INFO  127.0.0.1 - - [15/Jun/2026 21:18:46] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:48,272  INFO  127.0.0.1 - - [15/Jun/2026 21:18:48] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:49,520  INFO  MediaPipe loaded for face detection
+2026-06-15 21:18:49,610  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-06-15 21:18:50,283  INFO  127.0.0.1 - - [15/Jun/2026 21:18:50] "[35m[1mGET /health HTTP/1.1[0m" 202 -
+2026-06-15 21:18:50,359  INFO    Checkpoint epoch : 11
+2026-06-15 21:18:50,359  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-06-15 21:18:50,359  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-06-15 21:18:51,002  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-06-15 21:18:51,006  INFO  TriGuardInference ready on cpu
+2026-06-15 21:18:51,007  INFO  Model loaded successfully.
+2026-06-15 21:18:52,297  INFO  127.0.0.1 - - [15/Jun/2026 21:18:52] "GET /health HTTP/1.1" 200 -
+2026-06-15 21:19:13,680  INFO  Single predict: 11__exit_phone_room.mp4 → output\uploads\a1eefc51_11__exit_phone_room.mp4
+2026-06-15 21:19:13,680  INFO  Preprocessing: a1eefc51_11__exit_phone_room.mp4
+2026-06-15 21:19:14,104  INFO    Video has 819 frames, reading up to 150
+2026-06-15 21:19:16,489  INFO    Using 150 frames
+2026-06-15 21:19:22,104  INFO    Face detections: 10/30 attempts
+2026-06-15 21:19:22,976  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-06-15 21:19:25,287  INFO    → REAL (fake_prob=0.0269, 11.6s)
+2026-06-15 21:19:25,287  INFO  Result: REAL (fake=0.0269)
+2026-06-15 21:19:25,297  INFO  127.0.0.1 - - [15/Jun/2026 21:19:25] "POST /predict HTTP/1.1" 200 -

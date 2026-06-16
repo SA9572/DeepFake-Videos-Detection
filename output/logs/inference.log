@@ -1,0 +1,86 @@
+2026-03-30 13:01:18,516  INFO  MediaPipe loaded for face detection
+2026-03-30 13:01:18,639  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-03-30 13:01:18,915  INFO    Checkpoint epoch : 11
+2026-03-30 13:01:18,915  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-03-30 13:01:18,916  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-03-30 13:01:19,590  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-03-30 13:01:19,592  INFO  TriGuardInference ready on cpu
+2026-03-30 13:01:19,593  ERROR    Error: Video not found: C:\path\to\DFD_original_sequences\01__exit_phone_room.mp4
+2026-03-30 13:02:11,101  INFO  MediaPipe loaded for face detection
+2026-03-30 13:02:11,127  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-03-30 13:02:11,283  INFO    Checkpoint epoch : 11
+2026-03-30 13:02:11,283  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-03-30 13:02:11,284  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-03-30 13:02:11,656  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-03-30 13:02:11,658  INFO  TriGuardInference ready on cpu
+2026-03-30 13:02:11,658  INFO  Preprocessing: 01_02__exit_phone_room__YVGY8LOK.mp4
+2026-03-30 13:02:11,938  INFO    Video has 210 frames, reading up to 150
+2026-03-30 13:02:12,882  INFO    Using 150 frames
+2026-03-30 13:02:13,526  INFO    Face detections: 29/30 attempts
+2026-03-30 13:02:13,832  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-03-30 13:02:14,444  INFO    → FAKE (fake_prob=0.9773, 2.8s)
+2026-03-30 13:02:46,678  INFO  MediaPipe loaded for face detection
+2026-03-30 13:02:46,703  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-03-30 13:02:46,854  INFO    Checkpoint epoch : 11
+2026-03-30 13:02:46,854  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-03-30 13:02:46,855  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-03-30 13:02:47,226  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-03-30 13:02:47,228  INFO  TriGuardInference ready on cpu
+2026-03-30 13:02:47,229  INFO  Preprocessing: 01_02__walking_down_indoor_hall_disgust__YVGY8LOK.mp4
+2026-03-30 13:02:47,275  INFO    Video has 773 frames, reading up to 150
+2026-03-30 13:02:48,103  INFO    Using 150 frames
+2026-03-30 13:02:48,230  INFO    Face detections: 30/30 attempts
+2026-03-30 13:02:48,497  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-03-30 13:02:48,996  INFO    → FAKE (fake_prob=0.9807, 1.8s)
+2026-03-30 13:03:34,990  INFO  MediaPipe loaded for face detection
+2026-03-30 13:03:35,014  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-03-30 13:03:35,164  INFO    Checkpoint epoch : 11
+2026-03-30 13:03:35,164  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-03-30 13:03:35,164  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-03-30 13:03:35,511  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-03-30 13:03:35,513  INFO  TriGuardInference ready on cpu
+2026-03-30 13:03:35,514  INFO  Preprocessing: 01__kitchen_still.mp4
+2026-03-30 13:03:35,540  INFO    Video has 800 frames, reading up to 150
+2026-03-30 13:03:36,266  INFO    Using 150 frames
+2026-03-30 13:03:36,400  INFO    Face detections: 30/30 attempts
+2026-03-30 13:03:36,659  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-03-30 13:03:37,100  INFO    → REAL (fake_prob=0.0241, 1.6s)
+2026-03-30 14:50:36,214  INFO  MediaPipe loaded for face detection
+2026-03-30 14:50:36,272  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-03-30 14:50:36,580  INFO    Checkpoint epoch : 11
+2026-03-30 14:50:36,580  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-03-30 14:50:36,581  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-03-30 14:50:37,150  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-03-30 14:50:37,152  INFO  TriGuardInference ready on cpu
+2026-03-30 14:50:37,153  INFO  Preprocessing: 01__kitchen_still.mp4
+2026-03-30 14:50:37,255  INFO    Video has 800 frames, reading up to 150
+2026-03-30 14:50:38,436  INFO    Using 150 frames
+2026-03-30 14:50:38,667  INFO    Face detections: 30/30 attempts
+2026-03-30 14:50:39,056  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-03-30 14:50:39,923  INFO    → REAL (fake_prob=0.0241, 2.8s)
+2026-03-30 14:52:31,009  INFO  MediaPipe loaded for face detection
+2026-03-30 14:52:31,052  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-03-30 14:52:31,267  INFO    Checkpoint epoch : 11
+2026-03-30 14:52:31,267  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-03-30 14:52:31,268  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-03-30 14:52:31,788  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-03-30 14:52:31,791  INFO  TriGuardInference ready on cpu
+2026-03-30 14:52:31,794  INFO  Preprocessing: 01_03__kitchen_still__JZUXXFRB.mp4
+2026-03-30 14:52:31,847  INFO    Video has 529 frames, reading up to 150
+2026-03-30 14:52:33,087  INFO    Using 150 frames
+2026-03-30 14:52:33,254  INFO    Face detections: 30/30 attempts
+2026-03-30 14:52:33,571  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-03-30 14:52:34,304  INFO    → FAKE (fake_prob=0.9805, 2.5s)
+2026-03-31 13:57:49,158  INFO  MediaPipe loaded for face detection
+2026-03-31 13:57:49,253  INFO  Loading checkpoint from models\triguard_best.pt (232.2 MB)
+2026-03-31 13:57:49,649  INFO    Checkpoint epoch : 11
+2026-03-31 13:57:49,649  INFO    Checkpoint AUC   : 0.9201540348964014
+2026-03-31 13:57:49,649  INFO    embed_dim=256, n_faces=5, n_rois=6, clip_f=150, fft_sz=96
+2026-03-31 13:57:50,357  INFO    Model loaded: 22,620,714 parameters on cpu
+2026-03-31 13:57:50,360  INFO  TriGuardInference ready on cpu
+2026-03-31 13:57:50,362  INFO  Preprocessing: 01_02__walking_down_indoor_hall_disgust__YVGY8LOK.mp4
+2026-03-31 13:57:50,659  INFO    Video has 773 frames, reading up to 150
+2026-03-31 13:57:51,920  INFO    Using 150 frames
+2026-03-31 13:57:52,135  INFO    Face detections: 30/30 attempts
+2026-03-31 13:57:52,485  INFO    Tensors: faces=(1, 5, 3, 224, 224), fft=(1, 5, 96, 96), rppg=(1, 6, 150), coh=(1, 6, 6)
+2026-03-31 13:57:53,384  INFO    → FAKE (fake_prob=0.9807, 3.0s)
