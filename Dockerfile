@@ -71,10 +71,9 @@ EXPOSE 5000
 # ─────────────────────────────────────────────────────────────────────────────
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:5000/health').read()"
+    CMD sh -c "python -c \"import os,urllib.request;port=os.getenv('PORT','5000');urllib.request.urlopen(f'http://localhost:{port}/health').read()\""
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Run with gunicorn
 # ─────────────────────────────────────────────────────────────────────────────
-
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "--timeout", "120", "--access-logfile", "-", "--error-logfile", "-", "app:app"]
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-5000} --workers 2 --timeout 120 --access-logfile - --error-logfile - app:app"]
